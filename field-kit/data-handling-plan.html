@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:">
+  <title>Facility Data-Handling Plan – IPC Starter Kit v1.0.0</title>
+  <style>
+    @page { size: auto; margin: 12mm; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #000;
+      background: #fff;
+      margin: 0;
+      padding: 8px;
+      font-size: 11.5px;
+      line-height: 1.32;
+    }
+    .page {
+      max-width: 190mm;
+      margin: 0 auto;
+    }
+    .nav-bar {
+      margin-bottom: 6px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #444;
+      font-size: 11px;
+    }
+    .nav-bar a { color: #000; text-decoration: underline; margin-right: 12px; }
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 2px solid #000;
+      padding-bottom: 2px;
+      margin-bottom: 4px;
+    }
+    h1 { font-size: 16px; margin: 0; }
+    .privacy-banner {
+      border: 1.5px solid #000;
+      padding: 4px 6px;
+      font-weight: bold;
+      text-align: center;
+      background: #f4f4f4;
+      margin-bottom: 5px;
+      font-size: 11.5px;
+    }
+    .note-box {
+      border: 1px solid #000;
+      padding: 4px 7px;
+      margin-bottom: 6px;
+      font-size: 10.5px;
+      background: #fafafa;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 6px;
+    }
+    th, td {
+      border: 1px solid #000;
+      padding: 4px 6px;
+      vertical-align: top;
+      font-size: 10.8px;
+    }
+    th {
+      background: #eee;
+      text-align: left;
+      width: 34%;
+    }
+    .cb {
+      display: inline-block;
+      width: 5.2mm;
+      height: 5.2mm;
+      border: 1.5px solid #000;
+      vertical-align: middle;
+      margin-right: 3px;
+      background: #fff;
+    }
+    .ev { font-size: 9.5px; font-weight: normal; color: #222; }
+    .sign-box {
+      border: 1px solid #000;
+      padding: 6px 8px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+      font-size: 11px;
+    }
+    footer {
+      margin-top: 6px;
+      padding-top: 3px;
+      border-top: 1px solid #000;
+      font-size: 10px;
+      text-align: center;
+    }
+    footer a { color: #000; }
+    @media print {
+      body { padding: 0; font-size: 11px; }
+      .nav-bar { display: none; }
+      .page { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="nav-bar">
+      <a href="index.html">← Field Kit Index</a>
+      <a href="../ipc-kit.html">Open App (ipc-kit.html)</a>
+      <a href="../evidence/evidence-register.html">Evidence Register</a>
+    </div>
+
+    <div class="top-header">
+      <h1>Facility Data-Handling Plan (Fill-In Form)</h1>
+      <span>Complete using ROLES, never personal names <span class="ev">[PR-01, PR-02, PR-03]</span></span>
+    </div>
+
+    <div class="privacy-banner">
+      Do not write names, ID numbers or clinical details on this sheet. <span class="ev">[HH-10, PR-02, PR-03]</span>
+    </div>
+
+    <div class="note-box">
+      <strong>Scope &amp; Reference Model Note <span class="ev">[PR-01, PR-02, PR-03]</span>:</strong>
+      The IPC Starter Kit collects <strong>no</strong> patient or staff identifiers and stores only grouped monthly counts by area code and supply stock balances <span class="ev">[HH-10, PR-02, PR-03]</span>. This plan uses administrative, physical, and technical safeguard categories from the HIPAA Security Rule strictly as a practical reference model for local device and backup stewardship—<strong>it is not a legal claim of HIPAA compliance</strong> <span class="ev">[PR-01]</span>. Any future workflow that handles personal health information (PHI) requires a separate deployment-specific privacy and security review <span class="ev">[PR-03]</span>.
+    </div>
+
+    <table>
+      <tbody>
+        <tr>
+          <th>1. Facility code / label &amp; approved area codes</th>
+          <td>
+            Facility label: ______________________________ &nbsp; Effective date: _______________<br>
+            Approved area codes (capital letters/numbers/dash, max 12 chars, e.g. <code>OPD</code>, <code>MAT</code>, <code>WARD-A</code>):<br>
+            ____________________________________________________________________________________
+          </td>
+        </tr>
+        <tr>
+          <th>2. Approved device(s) &amp; browser</th>
+          <td>
+            Device label(s) &amp; room/location (no personal names): ________________________________________<br>
+            Approved browser on device (use ONE browser consistently): ___________________________________
+          </td>
+        </tr>
+        <tr>
+          <th>3. Where the app file lives</th>
+          <td>
+            Fixed folder path on the device (e.g. <code>C:\ipc-starter-kit\ipc-kit.html</code>):<br>
+            ____________________________________________________________________________________<br>
+            <em>Rule:</em> Keep the file in this exact folder; moving the file causes the browser to show an empty dataset.
+          </td>
+        </tr>
+        <tr>
+          <th>4. Approved backup location(s) &amp; access roles</th>
+          <td>
+            <span class="cb"></span> Encrypted USB drive kept in locked cabinet (location: ___________________________)<br>
+            <span class="cb"></span> Facility computer / local server folder (path: __________________________________)<br>
+            Roles permitted to access backups (e.g. <em>IPC focal person</em>, <em>Facility manager</em>): ____________________
+          </td>
+        </tr>
+        <tr>
+          <th>5. Backup schedule</th>
+          <td>
+            <span class="cb"></span> Weekly (every _______________) &nbsp; <span class="cb"></span> After monthly review &nbsp; <span class="cb"></span> Before/after any restore test<br>
+            Responsible role for making backups: ____________________________________________________
+          </td>
+        </tr>
+        <tr>
+          <th>6. Device screen lock / PIN</th>
+          <td>
+            <span class="cb"></span> Screen lock / PIN enabled on all approved devices (auto-lock after ____ minutes).<br>
+            Responsible role for checking device lock: _________________________________________________
+          </td>
+        </tr>
+        <tr>
+          <th>7. Cloud sync of Downloads / backup folder</th>
+          <td>
+            <span class="cb"></span> Automatic cloud sync (OneDrive/Google Drive/iCloud) is <strong>disabled</strong> for the browser Downloads and backup folders &nbsp; OR &nbsp; <span class="cb"></span> Explicitly approved by facility leadership (role: ____________________).
+          </td>
+        </tr>
+        <tr>
+          <th>8. Browser 'Clear data' warning</th>
+          <td>
+            <span class="cb"></span> Staff briefed: clearing browser site data, using private/incognito windows, or uninstalling the browser deletes local app records. Always download and verify a backup before browser maintenance.
+          </td>
+        </tr>
+        <tr>
+          <th>9. Retention period for backups &amp; paper sheets</th>
+          <td>
+            Keep verified backup files (<code>ipc-kit-backup_YYYY-MM-DD_HHMM_v1.json</code>) for ______ months (facility decides; delete backups older than ______ months after confirming newer backups work).<br>
+            Keep paper observation/count sheets in a closed folder for ______ months, then shred/destroy.
+          </td>
+        </tr>
+        <tr>
+          <th>10. Small-group review before sharing <span class="ev">[HH-07, HH-10]</span></th>
+          <td>
+            Small-sample threshold in app: ______ opportunities (default 200).<br>
+            The sample-size alert is for interpreting results. Check all reports for identification risk before sharing.<br>
+            Reviewing role: ____________________________________
+          </td>
+        </tr>
+        <tr>
+          <th>11. What may be shared outside the facility</th>
+          <td>
+            <span class="cb"></span> Aggregate monthly summary reports only, after review by the role in item 10.<br>
+            <em>Never share unreviewed backup files or attempt to link observations to individual staff <span class="ev">[HH-10]</span>.</em>
+          </td>
+        </tr>
+        <tr>
+          <th>12. Quarterly restore test (every 3 months)</th>
+          <td>
+            Test restoring the latest backup every 3 months (using <code>Backup &gt; Restore from backup</code> or <code>python3 tools/ipc_tool.py check-backup FILE</code>).<br>
+            Next restore test dates: Q1 __________ · Q2 __________ · Q3 __________ · Q4 __________
+          </td>
+        </tr>
+        <tr>
+          <th>13. If a device or backup drive is lost/damaged</th>
+          <td>
+            Notify role immediately: _________________________. Replace locked USB/PIN if needed, place <code>ipc-kit.html</code> on the replacement device, and restore the latest verified backup file.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="sign-box">
+      <strong>Sign-off by Roles (write ROLES, not personal names):</strong><br><br>
+      Prepared by role (e.g. <em>IPC focal person</em>): _________________________ &nbsp; Date (YYYY-MM-DD): _______________<br><br>
+      Approved by role (e.g. <em>Facility manager</em>): _________________________ &nbsp; Date (YYYY-MM-DD): _______________
+    </div>
+
+    <footer>
+      IPC Starter Kit v1.0.0 · Original text © 2026 @mostafase · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> · Sources: see evidence register (<a href="../evidence/evidence-register.html">evidence/evidence-register.html</a>)
+    </footer>
+  </div>
+</body>
+</html>

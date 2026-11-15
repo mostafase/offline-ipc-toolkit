@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:">
+  <title>Evidence Register – IPC Starter Kit v1.0.0</title>
+  <style>
+    @page { size: auto; margin: 12mm; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #000;
+      background: #fff;
+      margin: 0;
+      padding: 12px;
+      font-size: 12px;
+      line-height: 1.38;
+    }
+    .page {
+      max-width: 240mm;
+      margin: 0 auto;
+    }
+    .nav-bar {
+      margin-bottom: 8px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #444;
+      font-size: 11.5px;
+    }
+    .nav-bar a { color: #000; text-decoration: underline; margin-right: 14px; }
+    h1 {
+      font-size: 19px;
+      margin: 0 0 6px 0;
+      border-bottom: 2px solid #000;
+      padding-bottom: 4px;
+    }
+    h2 {
+      font-size: 14px;
+      margin: 12px 0 5px 0;
+      border-bottom: 1px solid #000;
+      padding-bottom: 2px;
+      text-transform: uppercase;
+    }
+    .callout {
+      border: 1.5px solid #000;
+      padding: 6px 9px;
+      margin-bottom: 10px;
+      background: #f6f6f6;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 12px;
+    }
+    th, td {
+      border: 1px solid #000;
+      padding: 4px 5px;
+      text-align: left;
+      vertical-align: top;
+      font-size: 11px;
+    }
+    th {
+      background: #e9e9e9;
+      font-weight: bold;
+    }
+    tr.facility-choice {
+      background: #f0f0f0;
+      border-left: 4px solid #000;
+      border-right: 4px solid #000;
+    }
+    .type-badge {
+      display: inline-block;
+      border: 1px solid #000;
+      padding: 1px 4px;
+      font-size: 10px;
+      font-weight: bold;
+      background: #fff;
+    }
+    .type-fc {
+      border: 2px solid #000;
+      background: #000;
+      color: #fff;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 10.5px;
+      word-break: break-all;
+    }
+    footer {
+      margin-top: 12px;
+      padding-top: 6px;
+      border-top: 1px solid #000;
+      font-size: 11px;
+      text-align: center;
+    }
+    footer a { color: #000; }
+    @media print {
+      body { padding: 0; font-size: 10px; }
+      .nav-bar { display: none; }
+      .page { max-width: 100%; }
+      .type-fc { background: #fff; color: #000; border: 2px dashed #000; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="nav-bar">
+      <a href="../ipc-kit.html">Open App (ipc-kit.html)</a>
+      <a href="../field-kit/index.html">Field Kit Index</a>
+      <a href="evidence-register.csv">Download CSV (evidence-register.csv)</a>
+    </div>
+
+    <h1>IPC Starter Kit v1.0.0 – Evidence &amp; Design Register</h1>
+
+    <div class="callout">
+      <strong>How to Verify This Register Before Local Use:</strong><br>
+      During the offline build of this starter kit, the external source PDFs (WHO IRIS, USAID, and US HHS) could not be fetched over the network. To maintain strict citation honesty, <strong>no page numbers have been invented</strong>, expected topics/sections are listed only where confident, and every row resting on published guidance is marked <em>"Not yet verified against source text – check during local IPC lead review"</em>. Before using the kit for real facility data, the local IPC focal person must check these claims against the facility's official copies of the source documents and sign off Part A of <a href="../field-kit/ipc-lead-review-and-pilot-checklist.html">field-kit/ipc-lead-review-and-pilot-checklist.html</a>.
+    </div>
+
+    <h2>1. Published Guidance &amp; Kit Design Choice Claims</h2>
+    <p>Note: Locally configurable <strong>Facility choice</strong> rows are separated into Table 2 below and also highlighted with a bold badge.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 6%;">ID</th>
+          <th style="width: 11%;">Used in</th>
+          <th style="width: 25%;">Claim (our original wording)</th>
+          <th style="width: 11%;">Type</th>
+          <th style="width: 14%;">Source</th>
+          <th style="width: 12%;">Expected section/topic</th>
+          <th style="width: 12%;">Verification status</th>
+          <th style="width: 9%;">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>HH-01</strong></td>
+          <td>app rule / training claim</td>
+          <td>Hand hygiene observation uses five moments: (1) Before touching a patient, (2) Before a clean/aseptic procedure, (3) After body fluid exposure risk, (4) After touching a patient, and (5) After touching patient surroundings.</td>
+          <td><span class="type-badge">Published guidance</span></td>
+          <td>WHO Hand Hygiene Technical Reference Manual 2009 [TRM]</td>
+          <td>Five moments for hand hygiene concept &amp; indications</td>
+          <td>Not yet verified against source text – check during local IPC lead review</td>
+          <td>Original wording only; no WHO graphics bundled.</td>
+        </tr>
+        <tr>
+          <td><strong>HH-02</strong></td>
+          <td>app metric / app rule</td>
+          <td>When one or more hand hygiene indications (moments) occur together at the same time between care tasks, they are recorded as ONE single hand hygiene opportunity and counted once.</td>
+          <td><span class="type-badge">Published guidance</span></td>
+          <td>WHO Hand Hygiene Technical Reference Manual 2009 [TRM]</td>
+          <td>Definition of opportunity vs. indication during direct observation</td>
+          <td>Not yet verified against source text – check during local IPC lead review</td>
+          <td>Prevents double-counting transition between patients.</td>
+        </tr>
+        <tr>
+          <td><strong>HH-03</strong></td>
+          <td>app metric</td>
+          <td>Hand hygiene adherence (compliance) percentage is calculated as 100 multiplied by total positive actions (hand rub + handwash) divided by total opportunities.</td>
+          <td><span class="type-badge">Published guidance</span></td>
+          <td>WHO Hand Hygiene Technical Reference Manual 2009 [TRM]</td>
+          <td>Compliance calculation formula</td>
+          <td>Not yet verified against source text – check during local IPC lead review</td>
+          <td>Denominator is opportunities, not indications.</td>
+        </tr>
+        <tr>
+          <td><strong>HH-04</strong></td>
+          <td>app rule</td>
+          <td>Each observed opportunity has exactly one recorded action outcome: alcohol-based hand rub, handwashing with soap and water, or missed (counted as not performed).</td>
+          <td><span class="type-badge">Published guidance</span></td>
+          <td>WHO Hand Hygiene Technical Reference Manual 2009 [TRM]</td>
+          <td>Recording hand hygiene actions (rub, wash, missed)</td>
+          <td>Not yet verified against source text – check during local IPC lead review</td>
+          <td>One outcome per opportunity row.</td>
+        </tr>
+        <tr>
+          <td><strong>HH-05</strong></td>
+          <td>app metric / app rule</td>
+          <td>Multiple observation sessions are combined by summing action counts and opportunity counts first before calculating adherence, never by averaging session percentages.</td>
+          <td><span class="type-badge">Kit design choice</span></td>
+          <td>Follows mathematically from HH-03 (WHO TRM 2009)</td>
+          <td>Aggregating observation sessions</td>
+          <td>Kit design choice (mathematical rule)</td>
+          <td>Tested in Scenario 6 and enforced in app &amp; CLI tool.</td>
+        </tr>
+        <tr>
+          <td><strong>HH-06</strong></td>
+          <td>app metric / app rule</td>
+          <td>Adherence is always displayed with numerator and denominator counts ('X of Y opportunities, Z%'), shows 'No observations' when Y = 0, and avoids misleading 0% or 100% rounding on non-extreme values.</td>
+          <td><span class="type-badge">Kit design choice</span></td>
+          <td>IPC Starter Kit design rule</td>
+          <td>Reporting display format</td>
+          <td>Kit design choice (verified in app UI)</td>
+          <td>Prevents misinterpreting small denominators.</td>
+        </tr>
+        <tr>
+          <td><strong>HH-08</strong></td>
+          <td>training claim</td>
+          <td>A standard direct hand hygiene observation session lasts about 20 minutes.</td>
+          <td><span class="type-badge">Published guidance</span></td>
+          <td>WHO Hand Hygiene Technical Reference Manual 2009 [TRM]</td>
+          <td>Observation session duration guidance</td>
+          <td>Not yet verified against source text – check during local IPC lead review</td>
+          <td>Verify exact session length wording during local review.</td>
+        </tr>
+        <tr>
+          <td><strong>HH-09</strong></td>
+          <td>training claim</td>
+          <td>Observers should be trained and practice with sample scenarios before collecting real observation data.</td>
+          <td><span class="type-badge">Published guidance</span></td>
+          <td>WHO Hand Hygiene Technical Reference Manual 2009 [TRM]</td>
+          <td>Observer training and validation</td>
+          <td>Not yet verified against source text – check during local IPC lead review</td>
+          <td>Supported by 5-minute practice run &amp; 6 scenarios.</td>
+        </tr>
+        <tr>
+          <td><strong>HH-10</strong></td>
+          <td>app rule / training claim</td>
+          <td>Hand hygiene observation is used to improve systems and is not used to identify, blame, or judge individuals; the kit stores only grouped counts by month and area code with no names, staff categories, or timestamps.</td>
+          <td><span class="type-badge">Published guidance</span></td>
+          <td>WHO Hand Hygiene Technical Reference Manual 2009 [TRM] + Kit design choice</td>
+          <td>Observation ethics, anonymity, and non-punitive feedback</td>
+          <td>Not yet verified against source text – check during local IPC lead review</td>
+          <td>Omitting staff category is an intentional kit privacy choice.</td>
+        </tr>
+        <tr>
+          <td><strong>HH-11</strong></td>
+          <td>training claim</td>
+          <td>Wearing medical gloves does not replace hand hygiene; hands must be cleaned when indicated before putting on gloves and after removing gloves.</td>
+          <td><span class="type-badge">Published guidance</span></td>
+          <td>WHO Hand Hygiene Technical Reference Manual 2009 [TRM]; WHO Guidelines on Hand Hygiene in Health Care 2009</td>
+          <td>Glove use and hand hygiene indications</td>
+          <td>Not yet verified against source text – check during local IPC lead review</td>
+          <td>Practiced in Scenarios 2 and 3.</td>
+        </tr>
+        <tr>
+          <td><strong>HH-12</strong></td>
+          <td>training claim / checklist item</td>
+          <td>Observation results are fed back regularly to health workers and facility leadership to guide practical improvements.</td>
+          <td><span class="type-badge">Published guidance</span></td>
+          <td>WHO TRM 2009; WHO Minimum requirements for IPC programmes 2019</td>
+          <td>Performance feedback; Core Component 6 (Monitoring, audit and feedback)</td>
+          <td>Not yet verified against source text – check during local IPC lead review</td>
+          <td>Used in 30-minute monthly review routine.</td>
+        </tr>
+        <tr>
+          <td><strong>HH-13</strong></td>
+          <td>training claim</td>
+          <td>Cleaning hands with alcohol-based hand rub takes about 20–30 seconds; washing hands with soap and water takes about 40–60 seconds.</td>
+          <td><span class="type-badge">Published guidance</span></td>
+          <td>WHO Guidelines on Hand Hygiene in Health Care 2009</td>
+          <td>Duration of handrubbing and handwashing procedures</td>
+          <td>Not yet verified against source text – check during local IPC lead review</td>
+          <td>Verify exact duration range during local review.</td>
+        </tr>
+        <tr>
+          <td><strong>ST-01</strong></td>
+          <td>app rule / checklist item</td>
+          <td>Each tracked IPC supply item uses one consistent counting unit (such as bottle, box of 100, or bar), which is locked after the first entry so counts never mix units.</td>
+          <td><span class="type-badge">Published guidance</span></td>
+          <td>USAID | DELIVER PROJECT, The Logistics Handbook (2nd ed., 2011) [LH]</td>
+          <td>Standard unit of count on logistics records</td>
+          <td>Not yet verified against source text – check during local IPC lead review</td>
+          <td>App locks unit after first stock record.</td>
+        </tr>
+        <tr>
+          <td><strong>ST-02</strong></td>
+          <td>app metric / app rule</td>
+          <td>Stock on hand (balance) counts only usable stock available for use and excludes expired or damaged items.</td>
+          <td><span class="type-badge">Published guidance</span></td>
+          <td>USAID | DELIVER PROJECT, The Logistics Handbook 2011 [LH]</td>
+          <td>Definition of usable stock on hand</td>
+          <td>Not yet verified against source text – check during local IPC lead review</td>
+          <td>Expired stock is separated in app &amp; paper cards.</td>
+        </tr>
+        <tr>
+          <td><strong>ST-03</strong></td>
+          <td>app metric / app rule</td>
+          <td>A stockout occurs when usable stock on hand for an item reaches zero.</td>
+          <td><span class="type-badge">Published guidance</span></td>
+          <td>USAID | DELIVER PROJECT, The Logistics Handbook 2011 [LH]</td>
+          <td>Stockout definition and monitoring</td>
+          <td>Not yet verified against source text – check during local IPC lead review</td>
+          <td>Even if expired batches exist on shelf, 0 usable = stockout.</td>
+        </tr>
+        <tr>
+          <td><strong>ST-04</strong></td>
+          <td>app rule / checklist item</td>
+          <td>Staff perform regular physical counts of visible stock on the shelf and adjust stock records to match actual usable quantities.</td>
+          <td><span class="type-badge">Published guidance</span></td>
+          <td>USAID | DELIVER PROJECT, The Logistics Handbook 2011 [LH]</td>
+          <td>Physical inventory count and record reconciliation</td>
+          <td>Not yet verified against source text – check during local IPC lead review</td>
+          <td>Supported by Page 2 of stock sheet and app Count entry.</td>
+        </tr>
+        <tr>
+          <td><strong>ST-05</strong></td>
+          <td>app rule</td>
+          <td>All stock losses and adjustments are recorded separately from issues and require an explicit reason code (Expired – removed, Damaged, Lost, Transferred out, Found, Transferred in, Correction).</td>
+          <td><span class="type-badge">Published guidance</span></td>
+          <td>USAID | DELIVER PROJECT, The Logistics Handbook 2011 [LH]</td>
+          <td>Recording losses and adjustments on stock records</td>
+          <td>Not yet verified against source text – check during local IPC lead review</td>
+          <td>Distinguishes consumption (issues) from losses.</td>
+        </tr>
+        <tr>
+          <td><strong>ST-06</strong></td>
+          <td>app rule / checklist item</td>
+          <td>Stock cards and app records capture date, receipts, issues, physical counts, losses/adjustments, usable balance, batch number, and expiry date.</td>
+          <td><span class="type-badge">Published guidance</span></td>
+          <td>USAID | DELIVER PROJECT, The Logistics Handbook 2011 [LH]</td>
+          <td>Essential data elements on stockkeeping records / bin cards</td>
+          <td>Not yet verified against source text – check during local IPC lead review</td>
+          <td>Area code is optional on issues.</td>
+        </tr>
+        <tr>
+          <td><strong>ST-07</strong></td>
+          <td>app rule</td>
+          <td>Supplies that expire are managed by first-to-expire, first-out (FEFO): the earliest-expiring usable batch is displayed first as 'Use first' and automatically deducted first on issue.</td>
+          <td><span class="type-badge">Published guidance</span></td>
+          <td>USAID | DELIVER PROJECT, The Logistics Handbook 2011 [LH]</td>
+          <td>First-to-expire, first-out (FEFO) warehouse/storeroom rule</td>
+          <td>Not yet verified against source text – check during local IPC lead review</td>
+          <td>Reduces wastage from expiry.</td>
+        </tr>
+        <tr>
+          <td><strong>ST-10</strong></td>
+          <td>app rule / checklist item</td>
+          <td>Expired stock never counts toward usable stock totals and must be removed from usable storage; an expiry date is treated as usable up to and including that calendar date.</td>
+          <td><span class="type-badge">Published guidance</span></td>
+          <td>USAID | DELIVER PROJECT, The Logistics Handbook 2011 [LH]</td>
+          <td>Handling expired products and usable stock calculation</td>
+          <td>Not yet verified against source text – check during local IPC lead review</td>
+          <td>Inclusive expiry date boundary is explicit in app logic.</td>
+        </tr>
+        <tr>
+          <td><strong>RC-01</strong></td>
+          <td>checklist item</td>
+          <td>Safe water is available in patient care areas for handwashing and environmental cleaning, with covered backup water storage where piped supply is intermittent.</td>
+          <td><span class="type-badge">Published guidance</span></td>
+          <td>WHO/UNICEF WASH FIT (2nd ed., 2022); WHO Minimum requirements for IPC programmes 2019</td>
+          <td>Water domain indicators; Core Component 8 (Built environment, materials and equipment for IPC)</td>
+          <td>Not yet verified against source text – check during local IPC lead review</td>
+          <td>Readiness checklist Section 1.</td>
+        </tr>
+        <tr>
+          <td><strong>RC-02</strong></td>
+          <td>checklist item</td>
+          <td>Functional hand hygiene stations with soap and running water or alcohol-based hand rub are available at points of care and within 5 metres of toilets.</td>
+          <td><span class="type-badge">Published guidance</span></td>
+          <td>WHO/UNICEF WASH FIT (2nd ed., 2022); WHO Minimum requirements for IPC programmes 2019</td>
+          <td>Hand hygiene domain indicators; Core Component 8</td>
+          <td>Not yet verified against source text – check during local IPC lead review</td>
+          <td>Readiness checklist Sections 2 and 3.</td>
+        </tr>
+        <tr>
+          <td><strong>RC-03</strong></td>
+          <td>checklist item</td>
+          <td>Environmental cleaning supplies (detergent, disinfectant, mops/buckets, utility gloves) and a clear cleaning routine are available and followed.</td>
+          <td><span class="type-badge">Published guidance</span></td>
+          <td>WHO/UNICEF WASH FIT (2nd ed., 2022); WHO Minimum requirements for IPC programmes 2019</td>
+          <td>Environmental cleanliness domain; Core Component 8</td>
+          <td>Not yet verified against source text – check during local IPC lead review</td>
+          <td>Readiness checklist Section 4.</td>
+        </tr>
+        <tr>
+          <td><strong>RC-04</strong></td>
+          <td>checklist item</td>
+          <td>Health care waste is segregated at the point of generation (such as a three-bin system for general, infectious, and sharps waste) and safely stored/treated.</td>
+          <td><span class="type-badge">Published guidance</span></td>
+          <td>WHO/UNICEF WASH FIT (2nd ed., 2022); WHO Minimum requirements for IPC programmes 2019</td>
+          <td>Health care waste management domain; Core Component 8</td>
+          <td>Not yet verified against source text – check during local IPC lead review</td>
+          <td>Readiness checklist Section 5.</td>
+        </tr>
+        <tr>
+          <td><strong>RC-05</strong></td>
+          <td>checklist item</td>
+          <td>Sharps are placed immediately into puncture-resistant sharps containers located within arm's reach and replaced before passing the three-quarters fill line.</td>
+          <td><span class="type-badge">Published guidance</span></td>
+          <td>WHO/UNICEF WASH FIT (2nd ed., 2022)</td>
+          <td>Sharps waste safety indicators</td>
+          <td>Not yet verified against source text – check during local IPC lead review</td>
+          <td>Readiness checklist item 5.2.</td>
+        </tr>
+        <tr>
+          <td><strong>RC-06</strong></td>
+          <td>checklist item / app rule</td>
+          <td>Improvement action plans assign each corrective action to a responsible role with a due date and review completion at the next review meeting.</td>
+          <td><span class="type-badge">Published guidance</span></td>
+          <td>WHO/UNICEF WASH FIT (2nd ed., 2022)</td>
+          <td>Incremental improvement plan &amp; review cycle</td>
+          <td>Not yet verified against source text – check during local IPC lead review</td>
+          <td>Kit uses roles (never personal names) for accountability.</td>
+        </tr>
+        <tr>
+          <td><strong>IPC-01</strong></td>
+          <td>app rule / checklist item</td>
+          <td>Regular IPC monitoring, audit of practices and supplies, and timely feedback to staff and leadership are core requirements of an IPC programme.</td>
+          <td><span class="type-badge">Published guidance</span></td>
+          <td>WHO Minimum requirements for IPC programmes 2019</td>
+          <td>Core Component 6: Monitoring/audit of IPC practices and feedback</td>
+          <td>Not yet verified against source text – check during local IPC lead review</td>
+          <td>Basis for monthly review routine.</td>
+        </tr>
+        <tr>
+          <td><strong>IPC-02</strong></td>
+          <td>checklist item / training claim</td>
+          <td>Each facility should have a designated, trained IPC focal person (or lead) responsible for coordinating IPC activities and local reviews.</td>
+          <td><span class="type-badge">Published guidance</span></td>
+          <td>WHO Minimum requirements for IPC programmes 2019</td>
+          <td>Core Component 1: IPC programmes (primary care &amp; facility level)</td>
+          <td>Not yet verified against source text – check during local IPC lead review</td>
+          <td>Role responsible for Part A review and monthly routine.</td>
+        </tr>
+        <tr>
+          <td><strong>IPC-03</strong></td>
+          <td>training claim</td>
+          <td>Effective IPC improvement combines multiple elements (supplies at point of care, training, observation and feedback, reminders, and supportive culture).</td>
+          <td><span class="type-badge">Published guidance</span></td>
+          <td>WHO Minimum requirements for IPC programmes 2019</td>
+          <td>Core Component 5: Multimodal strategies for IPC interventions</td>
+          <td>Not yet verified against source text – check during local IPC lead review</td>
+          <td>Explains why stock, readiness, and hand hygiene are paired.</td>
+        </tr>
+        <tr>
+          <td><strong>PR-01</strong></td>
+          <td>checklist item</td>
+          <td>The Facility Data-Handling Plan organizes local device, backup, access, and retention rules around administrative, physical, and technical safeguard categories as a reference model, not a claim of legal HIPAA compliance.</td>
+          <td><span class="type-badge">Published guidance</span></td>
+          <td>US Department of Health and Human Services (HHS) – HIPAA Security Rule</td>
+          <td>Administrative, Physical, and Technical Safeguards (45 CFR Part 164 Subpart C)</td>
+          <td>Not yet verified against source text – check during local IPC lead review</td>
+          <td>Reference model only; kit stores no ePHI.</td>
+        </tr>
+        <tr>
+          <td><strong>PR-02</strong></td>
+          <td>app rule / checklist item</td>
+          <td>Personal identifiers listed in the HIPAA Safe Harbor de-identification standard (names, ID numbers, exact timestamps, photos, clinical details) are excluded from all app fields and paper sheets.</td>
+          <td><span class="type-badge">Published guidance</span></td>
+          <td>US Department of Health and Human Services (HHS) – HIPAA Privacy Rule</td>
+          <td>Safe Harbor de-identification method (45 CFR 164.514(b)(2))</td>
+          <td>Not yet verified against source text – check during local IPC lead review</td>
+          <td>Used to verify that no identifying fields exist.</td>
+        </tr>
+        <tr>
+          <td><strong>PR-03</strong></td>
+          <td>app rule</td>
+          <td>The IPC Starter Kit stores no personal health information (PHI) or staff identifiers; any future workflow that collects PHI requires a separate deployment-specific privacy and security review.</td>
+          <td><span class="type-badge">Kit design choice</span></td>
+          <td>IPC Starter Kit architecture &amp; scope boundary</td>
+          <td>Data minimization and zero-PHI scope</td>
+          <td>Kit design choice (verified in schema &amp; forms)</td>
+          <td>Enforced across all HTML forms and JSON/CSV exports.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>2. Facility Choice Rows (Configurable Locally)</h2>
+    <p>These thresholds and operational parameters are set or adjusted by the local facility in <code>Settings</code> or on the printable checklists:</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 6%;">ID</th>
+          <th style="width: 11%;">Used in</th>
+          <th style="width: 25%;">Claim / Configurable parameter (our original wording)</th>
+          <th style="width: 11%;">Type</th>
+          <th style="width: 14%;">Source</th>
+          <th style="width: 12%;">Expected section/topic</th>
+          <th style="width: 12%;">Verification status</th>
+          <th style="width: 9%;">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="facility-choice">
+          <td><strong>HH-07</strong></td>
+          <td>app metric / app rule</td>
+          <td>Hand hygiene results based on fewer than 200 opportunities (default; facility can change this threshold in Settings) are flagged 'Small sample – interpret with care'.</td>
+          <td><span class="type-badge type-fc">Facility choice</span></td>
+          <td>Facility choice, informed by WHO Hand Hygiene Technical Reference Manual 2009 [TRM]</td>
+          <td>Sample size guidance for hand hygiene observation (~200 opportunities per unit/period)</td>
+          <td>Not yet verified against source text – check during local IPC lead review</td>
+          <td>Default is 200; small clinics may review lower counts with care.</td>
+        </tr>
+        <tr class="facility-choice">
+          <td><strong>ST-08</strong></td>
+          <td>app rule / checklist item</td>
+          <td>The expiry alert window defaults to 90 days before an item's expiry date and can be customized by the facility or per item.</td>
+          <td><span class="type-badge type-fc">Facility choice</span></td>
+          <td>Facility choice (local resupply lead-time setting)</td>
+          <td>Configurable expiry warning lead time</td>
+          <td>Facility choice (configurable in Settings and per item)</td>
+          <td>Set longer if resupply deliveries take &gt;3 months.</td>
+        </tr>
+        <tr class="facility-choice">
+          <td><strong>ST-09</strong></td>
+          <td>app rule / checklist item</td>
+          <td>Each supply item has a locally set reorder point that triggers an alert when usable stock is at or below that quantity.</td>
+          <td><span class="type-badge type-fc">Facility choice</span></td>
+          <td>Facility choice, informed by USAID | DELIVER Logistics Handbook 2011 [LH]</td>
+          <td>Minimum/maximum stock levels and emergency order point concepts</td>
+          <td>Not yet verified against source text – check during local IPC lead review</td>
+          <td>Facility calculates based on monthly use and lead time.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>3. Sources and Reuse Terms</h2>
+    <p>
+      <strong>Decision recorded for this kit:</strong> <strong>NO third-party text, tables, or graphics are bundled in this repository.</strong> All app text, training scenarios, and printable sheets are 100% original wording released under CC BY-NC-SA 4.0. Reuse terms for the cited reference publications are noted below as <em>to confirm</em>:
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 28%;">Source document</th>
+          <th style="width: 34%;">Citation URL / ISBN (plain text)</th>
+          <th style="width: 20%;">Publisher reuse terms (to confirm)</th>
+          <th style="width: 18%;">How used in this kit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>WHO Hand Hygiene Technical Reference Manual (2009) [TRM]</td>
+          <td><code>https://www.who.int/publications/i/item/9789241598606</code></td>
+          <td>To confirm: 2009 publication may be 'All rights reserved' by WHO.</td>
+          <td>Cited only (HH-01..HH-12); no text or 'My 5 Moments' graphic copied.</td>
+        </tr>
+        <tr>
+          <td>WHO Guidelines on Hand Hygiene in Health Care (2009)</td>
+          <td>ISBN <code>9789241597906</code></td>
+          <td>To confirm: 2009 publication may be 'All rights reserved' by WHO.</td>
+          <td>Cited only for glove rule &amp; rub/wash duration (HH-11, HH-13).</td>
+        </tr>
+        <tr>
+          <td>USAID | DELIVER PROJECT, The Logistics Handbook: A Practical Guide for the Supply Chain Management of Health Commodities (2nd ed., 2011) [LH]</td>
+          <td><code>https://pdf.usaid.gov/pdf_docs/pnaeb974.pdf</code></td>
+          <td>To confirm: USAID-funded publication reuse/attribution terms.</td>
+          <td>Cited only for stock card, FEFO, physical count, and usable stock concepts (ST-01..ST-10).</td>
+        </tr>
+        <tr>
+          <td>WHO / UNICEF Water and Sanitation for Health Facility Improvement Tool (WASH FIT), 2nd ed. (2022)</td>
+          <td><code>https://www.who.int/publications/i/item/9789240043237</code></td>
+          <td>To confirm: WHO 2022 publications are usually CC BY-NC-SA 3.0 IGO.</td>
+          <td>Cited only for readiness domains and action plan concepts (RC-01..RC-06).</td>
+        </tr>
+        <tr>
+          <td>WHO Minimum requirements for infection prevention and control programmes (2019)</td>
+          <td><code>https://www.who.int/publications/i/item/9789241516945</code></td>
+          <td>To confirm: WHO 2019 publications are usually CC BY-NC-SA 3.0 IGO.</td>
+          <td>Cited only for core components (IPC-01..IPC-03, HH-12, RC-01..RC-04).</td>
+        </tr>
+        <tr>
+          <td>US HHS HIPAA Security Rule &amp; Privacy Rule (Safe Harbor de-identification)</td>
+          <td><code>https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html</code></td>
+          <td>To confirm: US federal government guidance (generally public domain in the US).</td>
+          <td>Cited only as safeguard reference model and identifier exclusion list (PR-01, PR-02).</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <footer>
+      IPC Starter Kit v1.0.0 · Original text © 2026 @mostafase · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> · Sources: see evidence register (<a href="evidence-register.html">evidence/evidence-register.html</a>)
+    </footer>
+  </div>
+</body>
+</html>

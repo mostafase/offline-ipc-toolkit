@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+tests/.work/
+.DS_Store
+Thumbs.db
+*.swp
+*.bak
+*.orig

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:">
+<title>IPC Starter Kit — Start Here</title>
+<style>
+  :root { --ink:#1d2433; --muted:#4a5568; --line:#c7cdd8; --bg:#f5f7fa; --blue:#12324f; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; color:var(--ink); background:var(--bg); line-height:1.5; }
+  main { max-width:820px; margin:0 auto; padding:1rem; }
+  header { background:var(--blue); color:#fff; padding:1rem; border-radius:10px; margin-bottom:1rem; }
+  header h1 { margin:0 0 .25rem; font-size:1.45rem; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:10px; padding:1rem; margin:.75rem 0; }
+  .btn { display:inline-block; background:var(--blue); color:#fff; text-decoration:none; font-weight:700; padding:.65rem 1.1rem; border-radius:8px; margin:.25rem .25rem .25rem 0; }
+  .btn.sec { background:#fff; color:var(--blue); border:2px solid var(--blue); }
+  ul { padding-left:1.2rem; }
+  li { margin:.35rem 0; }
+  footer { font-size:.88rem; color:var(--muted); margin-top:1.5rem; border-top:1px solid var(--line); padding-top:.75rem; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>IPC Starter Kit (v1.0.0)</h1>
+    <p style="margin:0">Offline hand hygiene observation &amp; IPC supply stock monitoring for clinics and hospitals.</p>
+  </header>
+
+  <div class="card">
+    <h2 style="margin-top:0">1. Open the Offline Tool or Print the Field Kit</h2>
+    <p>Designed for airplane-mode use on a supported device, with no accounts or installation. Check the device guide and test saving and restoring before entering facility data. Includes <strong>all 6 official UN languages</strong> in the app (<strong>English, العربية RTL, 中文, Français, Русский, Español</strong> — review non-English translations with a fluent local clinical reviewer before patient care use).</p>
+    <p><strong>For IPC education and quality improvement.</strong> The toolkit is not a certified medical device and should not replace professional clinical judgment. Keep patient and staff identifiers and clinical details out of the kit. See <a href="DISCLAIMER.md">Disclaimer</a>.</p>
+    <p><strong>First step:</strong> Unzip the release archive into <strong>one fixed folder</strong> before opening (never open HTML inside a <code>.zip</code> preview). On <strong>macOS</strong>, prefer <strong>Chrome, Firefox, or Edge</strong> rather than Safari for reliable local storage. Exported CSV files open directly in Excel (UTF-8 BOM included). If your phone or tablet cannot save local browser data, use the printable paper sheets below.</p>
+    <p style="font-size:.92rem;color:#4a5568"><strong>On Android / LineageOS:</strong> Do not tap links if your Files app opened this page as a <code>content://</code> preview (that triggers <code>ERR_FILE_NOT_FOUND</code>). Open <code>ipc-kit.html</code> directly in Chrome/Firefox (all 8 printable sheets, Evidence Register &amp; Device Guide are built right inside <code>ipc-kit.html</code>, zero external links needed), or open <code>field-kit/ALL-PRINTABLE-SHEETS.html</code>. See <code>docs/DEVICE-TESTING.md</code>.</p>
+    <p>
+      <a class="btn" href="ipc-kit.html">Open IPC Starter Kit App (ipc-kit.html)</a>
+      <a class="btn sec" href="field-kit/quick-start.html">One-Page Quick Start</a>
+      <a class="btn sec" href="field-kit/index.html">Printable Field Kit (8 Sheets)</a>
+      <a class="btn sec" href="field-kit/ALL-PRINTABLE-SHEETS.html">All 8 Sheets in One File</a>
+    </p>
+  </div>
+
+  <div class="card">
+    <h2 style="margin-top:0">2. Complete a 5-Minute Practice Run</h2>
+    <ol>
+      <li>Click <strong>Open IPC Starter Kit App</strong> above and choose <strong>Try a 5-minute practice run</strong>.</li>
+      <li>Answer the <strong>6 fictional practice questions</strong> (overlapping moments, missed hand hygiene with gloves, and interpreting a small sample).</li>
+      <li>Tally <strong>3 hand hygiene opportunities</strong> (including one where two moments happen together) and finish the session.</li>
+      <li>Record <strong>one stock issue</strong> and check the stockout, reorder point, and expiry alerts.</li>
+      <li>Download a <strong>versioned backup file</strong>.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2 style="margin-top:0">3. All Included Files</h2>
+    <ul>
+      <li><a href="ipc-kit.html"><code>ipc-kit.html</code></a> — Self-contained single-file offline web application (now also bundles all printable sheets, Evidence Register &amp; Guides built-in).</li>
+      <li><a href="field-kit/index.html"><code>field-kit/</code></a> — Printable implementation kit:
+        <ul>
+          <li><a href="field-kit/ALL-PRINTABLE-SHEETS.html"><strong>All 8 printable sheets combined in one file</strong></a> (works over Android <code>content://</code> with same-page links)</li>
+          <li><a href="field-kit/quick-start.html">One-page quick start</a></li>
+          <li><a href="field-kit/hand-hygiene-observation-sheet.html">Hand hygiene observation sheet</a></li>
+          <li><a href="field-kit/stock-card-and-count-sheet.html">Stock card and physical count sheet</a></li>
+          <li><a href="field-kit/readiness-checklist.html">IPC &amp; WASH readiness checklist</a></li>
+          <li><a href="field-kit/review-routine-and-action-log.html">Monthly review routine &amp; corrective action log</a></li>
+          <li><a href="field-kit/practice-scenarios.html">Printable practice scenarios &amp; answer key</a></li>
+          <li><a href="field-kit/data-handling-plan.html">Facility data-handling &amp; privacy plan</a></li>
+          <li><a href="field-kit/ipc-lead-review-and-pilot-checklist.html">Local IPC lead review &amp; pilot checklist</a></li>
+        </ul>
+      </li>
+      <li><a href="evidence/evidence-register.html"><code>evidence/evidence-register.html</code></a> (<a href="evidence/evidence-register.csv">CSV</a>) — Offline evidence register separating published guidance from facility and kit design choices.</li>
+      <li><a href="docs/DEVICE-TESTING.md"><code>docs/DEVICE-TESTING.md</code></a> &amp; <a href="docs/TRANSLATING.md"><code>docs/TRANSLATING.md</code></a> — Device opening/testing guide and translation guide.</li>
+      <li><code>sample-data/</code> — Fictional sample backup and aggregate CSV reports.</li>
+      <li><code>tools/ipc_tool.py</code> — Optional Python 3 (standard library only) desktop helper to verify backups and combine CSV reports.</li>
+    </ul>
+  </div>
+
+  <footer>
+    IPC Starter Kit v1.0.0 · Do not enter names, ID numbers, clinical details, photos, or notes · Project owner: @mostafase · <a href="LICENSE.md">Licenses</a> · <a href="LICENSE">Code</a>: PolyForm Noncommercial 1.0.0 · <a href="LICENSE-CONTENT.md">Training materials</a>: CC BY-NC-SA 4.0 · Sources: see <a href="evidence/evidence-register.html">evidence register</a>.
+  </footer>
+</main>
+</body>
+</html>

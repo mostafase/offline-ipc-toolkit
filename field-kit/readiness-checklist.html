@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:">
+  <title>IPC Area Readiness Checklist – IPC Starter Kit v1.0.0</title>
+  <style>
+    @page { size: auto; margin: 12mm; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #000;
+      background: #fff;
+      margin: 0;
+      padding: 6px;
+      font-size: 11.5px;
+      line-height: 1.25;
+    }
+    .page {
+      max-width: 190mm;
+      margin: 0 auto;
+    }
+    .nav-bar {
+      margin-bottom: 5px;
+      padding-bottom: 3px;
+      border-bottom: 1px solid #444;
+      font-size: 11px;
+    }
+    .nav-bar a { color: #000; text-decoration: underline; margin-right: 12px; }
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 2px solid #000;
+      padding-bottom: 2px;
+      margin-bottom: 4px;
+    }
+    h1 { font-size: 16px; margin: 0; }
+    .privacy-banner {
+      border: 1.5px solid #000;
+      padding: 3px 6px;
+      font-weight: bold;
+      text-align: center;
+      background: #f4f4f4;
+      margin-bottom: 4px;
+      font-size: 11.5px;
+    }
+    .meta-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 4px;
+      flex-wrap: wrap;
+    }
+    .meta-box {
+      border: 1px solid #000;
+      padding: 3px 6px;
+      flex: 1 1 140px;
+      font-weight: bold;
+    }
+    .meta-box span {
+      font-weight: normal;
+      font-size: 10px;
+      display: block;
+    }
+    .roles-box {
+      border: 1px solid #000;
+      padding: 3px 6px;
+      margin-bottom: 4px;
+      font-size: 10.5px;
+      background: #fafafa;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 4px;
+    }
+    th, td {
+      border: 1px solid #000;
+      padding: 2.5px 4px;
+      vertical-align: middle;
+      font-size: 10.5px;
+    }
+    th {
+      background: #eee;
+      text-align: center;
+    }
+    tr.sec-hdr td {
+      background: #ddd;
+      font-weight: bold;
+      font-size: 11px;
+      padding: 2px 5px;
+    }
+    td.center { text-align: center; white-space: nowrap; }
+    .cb {
+      display: inline-block;
+      width: 5.2mm;
+      height: 5.2mm;
+      border: 1.5px solid #000;
+      vertical-align: middle;
+      background: #fff;
+    }
+    .ev { font-size: 9.5px; font-weight: normal; color: #222; }
+    .fc {
+      font-size: 9.5px;
+      font-weight: bold;
+      border: 1px solid #000;
+      padding: 0 3px;
+      background: #fff;
+    }
+    footer {
+      margin-top: 4px;
+      padding-top: 3px;
+      border-top: 1px solid #000;
+      font-size: 10px;
+      text-align: center;
+    }
+    footer a { color: #000; }
+    @media print {
+      body { padding: 0; font-size: 10.8px; }
+      .nav-bar { display: none; }
+      .page { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="nav-bar">
+      <a href="index.html">← Field Kit Index</a>
+      <a href="../ipc-kit.html">Open App (ipc-kit.html)</a>
+      <a href="../evidence/evidence-register.html">Evidence Register</a>
+    </div>
+
+    <div class="top-header">
+      <h1>IPC Area Readiness Checklist (One Page per Area)</h1>
+      <span>Walk the area once a month · Copy priority actions to the Monthly Action Log <span class="ev">[RC-06]</span></span>
+    </div>
+
+    <div class="privacy-banner">
+      Do not write names, ID numbers or clinical details on this sheet. <span class="ev">[PR-02, PR-03]</span>
+    </div>
+
+    <div class="meta-row">
+      <div class="meta-box">Month (YYYY-MM): __________________<span>Example: 2026-11</span></div>
+      <div class="meta-box">Area code: __________________<span>Facility code, e.g. OPD, MAT, WARD-A</span></div>
+      <div class="meta-box">Checked by role: ___________________________<span>Role only (e.g. IPC focal person, Ward in-charge) – no name</span></div>
+    </div>
+
+    <div class="roles-box">
+      <strong>Responsible role choices (write a ROLE, never a person's name) <span class="ev">[RC-06, IPC-02]</span>:</strong>
+      <code>IPC focal person</code> · <code>Ward in-charge</code> · <code>Storekeeper</code> · <code>Facility manager</code> · <code>Maintenance lead</code> · <code>Cleaning supervisor</code>.<br>
+      Items marked <span class="fc">Facility choice</span> include local buffer quantities or schedules set by your facility.
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 40%;">Readiness check item</th>
+          <th style="width: 7%;">Yes</th>
+          <th style="width: 7%;">Partly</th>
+          <th style="width: 7%;">No</th>
+          <th style="width: 27%;">Action needed &amp; Responsible role<br><span class="ev">(if Partly or No) [RC-06]</span></th>
+          <th style="width: 12%;">Due date<br><span class="ev">(YYYY-MM-DD)</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- 1. WATER -->
+        <tr class="sec-hdr"><td colspan="6">1. Water <span class="ev">[RC-01]</span></td></tr>
+        <tr>
+          <td>1.1 Safe water is available in this care area today for handwashing and cleaning <span class="ev">[RC-01]</span></td>
+          <td class="center"><span class="cb"></span></td><td class="center"><span class="cb"></span></td><td class="center"><span class="cb"></span></td>
+          <td>Role:</td><td></td>
+        </tr>
+        <tr>
+          <td>1.2 Backup water container (covered, clean, with tap) holds at least one day's buffer when pipes fail <span class="ev">[RC-01]</span> <span class="fc">Facility choice</span></td>
+          <td class="center"><span class="cb"></span></td><td class="center"><span class="cb"></span></td><td class="center"><span class="cb"></span></td>
+          <td>Role:</td><td></td>
+        </tr>
+
+        <!-- 2. SOAP AND HANDWASHING -->
+        <tr class="sec-hdr"><td colspan="6">2. Soap and Handwashing <span class="ev">[RC-02]</span></td></tr>
+        <tr>
+          <td>2.1 Working handwashing station with running water and soap at care points and within 5 m of toilets <span class="ev">[RC-02]</span></td>
+          <td class="center"><span class="cb"></span></td><td class="center"><span class="cb"></span></td><td class="center"><span class="cb"></span></td>
+          <td>Role:</td><td></td>
+        </tr>
+        <tr>
+          <td>2.2 Clean single-use towels (or clean dry method approved by facility) available; no shared cloth towels <span class="ev">[RC-02]</span> <span class="fc">Facility choice</span></td>
+          <td class="center"><span class="cb"></span></td><td class="center"><span class="cb"></span></td><td class="center"><span class="cb"></span></td>
+          <td>Role:</td><td></td>
+        </tr>
+
+        <!-- 3. HAND RUB -->
+        <tr class="sec-hdr"><td colspan="6">3. Alcohol-Based Hand Rub <span class="ev">[RC-02]</span></td></tr>
+        <tr>
+          <td>3.1 Working, non-expired alcohol-based hand rub dispensers or bottles at points of care <span class="ev">[RC-02, ST-10]</span></td>
+          <td class="center"><span class="cb"></span></td><td class="center"><span class="cb"></span></td><td class="center"><span class="cb"></span></td>
+          <td>Role:</td><td></td>
+        </tr>
+        <tr>
+          <td>3.2 At least one spare bottle/refill kept in the area cupboard for immediate replacement <span class="ev">[RC-02, ST-09]</span> <span class="fc">Facility choice</span></td>
+          <td class="center"><span class="cb"></span></td><td class="center"><span class="cb"></span></td><td class="center"><span class="cb"></span></td>
+          <td>Role:</td><td></td>
+        </tr>
+
+        <!-- 4. CLEANING SUPPLIES -->
+        <tr class="sec-hdr"><td colspan="6">4. Cleaning Supplies and Routine <span class="ev">[RC-03]</span></td></tr>
+        <tr>
+          <td>4.1 Detergent, disinfectant (in-date), buckets, mops/cloths, and utility gloves available and stored cleanly <span class="ev">[RC-03, ST-10]</span></td>
+          <td class="center"><span class="cb"></span></td><td class="center"><span class="cb"></span></td><td class="center"><span class="cb"></span></td>
+          <td>Role:</td><td></td>
+        </tr>
+        <tr>
+          <td>4.2 Daily cleaning schedule for patient areas, high-touch surfaces, and toilets is posted and followed <span class="ev">[RC-03]</span> <span class="fc">Facility choice</span></td>
+          <td class="center"><span class="cb"></span></td><td class="center"><span class="cb"></span></td><td class="center"><span class="cb"></span></td>
+          <td>Role:</td><td></td>
+        </tr>
+
+        <!-- 5. WASTE HANDLING (+ SHARPS) -->
+        <tr class="sec-hdr"><td colspan="6">5. Waste Handling and Sharps Safety <span class="ev">[RC-04, RC-05]</span></td></tr>
+        <tr>
+          <td>5.1 Labelled/colour-coded waste bins (e.g. three-bin system: general, infectious, sharps) at point of generation <span class="ev">[RC-04]</span> <span class="fc">Facility choice</span></td>
+          <td class="center"><span class="cb"></span></td><td class="center"><span class="cb"></span></td><td class="center"><span class="cb"></span></td>
+          <td>Role:</td><td></td>
+        </tr>
+        <tr>
+          <td>5.2 Puncture-resistant sharps boxes are within arm's reach where sharps are used and are below the 3/4 fill line <span class="ev">[RC-05]</span></td>
+          <td class="center"><span class="cb"></span></td><td class="center"><span class="cb"></span></td><td class="center"><span class="cb"></span></td>
+          <td>Role:</td><td></td>
+        </tr>
+        <tr>
+          <td>5.3 Waste bags/bins are removed before overflowing and kept in a locked or fenced storage/treatment area <span class="ev">[RC-04]</span></td>
+          <td class="center"><span class="cb"></span></td><td class="center"><span class="cb"></span></td><td class="center"><span class="cb"></span></td>
+          <td>Role:</td><td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="font-size: 10.5px; border: 1px solid #000; padding: 3px 6px;">
+      <strong>Next step <span class="ev">[RC-06]</span>:</strong> Pick up to 3 top actions from <em>Partly</em> or <em>No</em> items above and copy them into the <strong>Monthly Review Routine &amp; Corrective Action Log</strong> (<code>review-routine-and-action-log.html</code>) with a responsible role and due date.
+    </div>
+
+    <footer>
+      IPC Starter Kit v1.0.0 · Original text © 2026 @mostafase · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> · Sources: see evidence register (<a href="../evidence/evidence-register.html">evidence/evidence-register.html</a>)
+    </footer>
+  </div>
+</body>
+</html>

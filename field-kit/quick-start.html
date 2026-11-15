@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:">
+  <title>Quick Start Guide – IPC Starter Kit v1.0.0</title>
+  <style>
+    @page { size: auto; margin: 12mm; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #000;
+      background: #fff;
+      margin: 0;
+      padding: 8px;
+      font-size: 12.5px;
+      line-height: 1.35;
+    }
+    .page {
+      max-width: 190mm;
+      margin: 0 auto;
+    }
+    .nav-bar {
+      margin-bottom: 6px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #444;
+      font-size: 11.5px;
+    }
+    .nav-bar a { color: #000; text-decoration: underline; margin-right: 12px; }
+    h1 {
+      font-size: 18px;
+      margin: 0 0 4px 0;
+      padding-bottom: 3px;
+      border-bottom: 2px solid #000;
+    }
+    h2 {
+      font-size: 13.5px;
+      margin: 7px 0 3px 0;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+    p, ul, ol { margin: 3px 0; }
+    ul, ol { padding-left: 18px; }
+    li { margin-bottom: 2px; }
+    .privacy-box {
+      border: 2px solid #000;
+      padding: 5px 8px;
+      margin: 5px 0;
+      background: #f8f8f8;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .privacy-box strong {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 2px;
+    }
+    .grid-2 {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .col {
+      flex: 1 1 250px;
+      border: 1px solid #000;
+      padding: 6px 8px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .cb {
+      display: inline-block;
+      width: 5.2mm;
+      height: 5.2mm;
+      border: 1.5px solid #000;
+      vertical-align: middle;
+      margin-right: 4px;
+      background: #fff;
+    }
+    .badge {
+      display: inline-block;
+      border: 1px solid #000;
+      padding: 0 4px;
+      font-weight: bold;
+      font-size: 11px;
+    }
+    .ev {
+      font-size: 10px;
+      font-weight: normal;
+      color: #222;
+    }
+    footer {
+      margin-top: 8px;
+      padding-top: 4px;
+      border-top: 1px solid #000;
+      font-size: 10.5px;
+      text-align: center;
+    }
+    footer a { color: #000; }
+    @media print {
+      body { padding: 0; font-size: 11.5px; line-height: 1.28; }
+      .nav-bar { display: none; }
+      .page { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="nav-bar">
+      <a href="index.html">← Field Kit Index</a>
+      <a href="../ipc-kit.html">Open App (ipc-kit.html)</a>
+      <a href="../evidence/evidence-register.html">Evidence Register</a>
+    </div>
+
+    <h1>IPC Starter Kit – One-Page Quick Start</h1>
+    <p>
+      <strong>What this kit is:</strong> A free, fully offline starter kit for infection prevention and control (IPC) in clinics and hospital wards <span class="ev">[IPC-01, IPC-03]</span>. It includes a one-file browser app (<code>ipc-kit.html</code>) and printable paper sheets for hand hygiene observation, IPC supply stock tracking, readiness checks, and a 30-minute monthly review.
+    </p>
+
+    <div class="privacy-box">
+      <strong>Privacy Rule: Do not write names, ID numbers or clinical details on this sheet.</strong>
+      Never record patient or staff names, ID numbers, clinical details, photos, or free-text observation notes on paper or in the app <span class="ev">[HH-10, PR-02, PR-03]</span>. The app saves only grouped counts by <strong>MONTH</strong> and <strong>AREA CODE</strong>. Where a responsible person is needed, always write a <strong>ROLE</strong> (for example, <em>Ward in-charge</em> or <em>IPC focal person</em>), never a person's name <span class="ev">[RC-06]</span>.
+    </div>
+
+    <div class="grid-2">
+      <div class="col">
+        <h2>1. How to Open the App</h2>
+        <ul>
+          <li><strong>Desktop (Windows, macOS, Linux):</strong> Double-click <code>ipc-kit.html</code>. No install, no internet, no account, and no admin rights are needed. Keep the folder in one fixed place.</li>
+          <li><strong>Where data lives:</strong> Data is saved only in that browser on that device (browser local storage). Clearing browser data, switching browsers, or moving the file shows an empty dataset—use backup files to keep records safe.</li>
+          <li><strong>Top bar checks:</strong> Check the mode badge (<span class="badge">PRACTICE – fictional data</span> or <span class="badge">REAL DATA</span>) and save status (<span class="badge">✔ Saved on this device 14:05</span> or <span class="badge">⚠ Not saved</span>).</li>
+          <li><strong>Android / iPhone / iPad:</strong> Unzip first and open <code>ipc-kit.html</code> directly in Chrome/Firefox (avoid Jelly WebView or tapping cross-file links under <code>content://</code>, which cause <code>ERR_FILE_NOT_FOUND</code>). All printable sheets are built inside <code>ipc-kit.html</code> (and <code>field-kit/ALL-PRINTABLE-SHEETS.html</code>). Run <code>Settings &gt; Check this device</code>; if saving fails or on iPhone/iPad Safari, use paper forms.</li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <h2>2. First Launch &amp; 5-Minute Practice Run</h2>
+        <p>On first launch, choose <strong>Try a 5-minute practice run</strong> (uses fictional data kept separate from real data) or <strong>Set up for real use</strong> (enter facility-approved area codes first, such as <code>OPD</code>, <code>MAT</code>, <code>WARD-A</code>; capital letters, numbers, or dash, up to 12 characters).</p>
+        <p><strong>5-minute practice checklist on the Home tab:</strong></p>
+        <ol>
+          <li><span class="cb"></span>Answer the 6 practice questions (~2 min) <span class="ev">[HH-09]</span>.</li>
+          <li><span class="cb"></span>Tally 3 opportunities, including one with two moments at the same time (~1 min) <span class="ev">[HH-01, HH-02]</span>.</li>
+          <li><span class="cb"></span>Finish the session and read the result (~30 s) <span class="ev">[HH-03, HH-06]</span>.</li>
+          <li><span class="cb"></span>Record one stock issue and look at the alerts (~1 min) <span class="ev">[ST-06, ST-07]</span>.</li>
+          <li><span class="cb"></span>Make a backup file (~30 s).</li>
+        </ol>
+      </div>
+    </div>
+
+    <h2>3. Everyday Use (App Tabs: Home · Hand hygiene · Stock · Reports · Backup · Settings)</h2>
+    <ul>
+      <li><strong>Hand hygiene (weekly sessions of ~20 min) <span class="ev">[HH-08]</span>:</strong> Use <code>Hand hygiene &gt; Tally</code> (pick Month and Area code, tick all moments 1–5 that apply, tap one outcome: <em>Hand rub</em>, <em>Handwash</em>, or <em>Missed</em>; use <em>Undo last</em> to fix a tap, then <em>Finish session and add to totals</em>) OR observe on the paper sheet (<code>hand-hygiene-observation-sheet.html</code>) and enter totals in <code>Hand hygiene &gt; Paper totals</code> <span class="ev">[HH-01..HH-06]</span>.</li>
+      <li><strong>Stock (as supplies move + monthly count):</strong> Check <code>Stock &gt; Status</code> to see usable stock, stockouts, items at/below reorder point, items expiring within the alert window (default 90 days), and expired stock to remove. The earliest-expiring usable batch is marked <em>Use first</em> <span class="ev">[ST-02, ST-03, ST-07..ST-10]</span>. Record movements in <code>Stock &gt; Record</code> (<em>Receipt</em>, <em>Issue</em>, <em>Physical count</em>, or <em>Adjustment</em> with reason code) or on <code>stock-card-and-count-sheet.html</code> <span class="ev">[ST-01, ST-04..ST-06]</span>.</li>
+      <li><strong>Weekly backup:</strong> Open <code>Backup</code> and click <strong>Download backup file</strong> (saves <code>ipc-kit-backup_YYYY-MM-DD_HHMM_v1.json</code>; practice files include <code>PRACTICE</code>). Copy it to the approved backup location in your facility's Data-Handling Plan <span class="ev">[PR-01]</span>. If file download fails on your device, use <strong>Show backup text</strong> and <strong>Paste backup text</strong>.</li>
+      <li><strong>Monthly review (30 minutes):</strong> Open <code>Reports</code> to print or download CSV reports (review any small groups before sharing). Meet using <code>review-routine-and-action-log.html</code> and check area readiness with <code>readiness-checklist.html</code> <span class="ev">[HH-12, RC-01..RC-06, IPC-01]</span>.</li>
+    </ul>
+
+    <h2>4. Where to Get Help</h2>
+    <p>
+      Ask your facility's <strong>IPC focal person</strong> or <strong>Ward in-charge</strong> <span class="ev">[IPC-02]</span>. Before starting real data collection, the IPC focal person must complete <code>ipc-lead-review-and-pilot-checklist.html</code> and <code>data-handling-plan.html</code>.
+    </p>
+
+    <footer>
+      IPC Starter Kit v1.0.0 · Original text © 2026 @mostafase · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> · Sources: see evidence register (<a href="../evidence/evidence-register.html">evidence/evidence-register.html</a>)
+    </footer>
+  </div>
+</body>
+</html>

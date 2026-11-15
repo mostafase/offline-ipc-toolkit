@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:">
+  <title>Monthly Review Routine and Corrective Action Log – IPC Starter Kit v1.0.0</title>
+  <style>
+    @page { size: auto; margin: 12mm; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #000;
+      background: #fff;
+      margin: 0;
+      padding: 8px;
+      font-size: 11.5px;
+      line-height: 1.3;
+    }
+    .page {
+      max-width: 190mm;
+      margin: 0 auto;
+    }
+    .nav-bar {
+      margin-bottom: 6px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #444;
+      font-size: 11px;
+    }
+    .nav-bar a { color: #000; text-decoration: underline; margin-right: 12px; }
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 2px solid #000;
+      padding-bottom: 2px;
+      margin-bottom: 4px;
+    }
+    h1 { font-size: 16px; margin: 0; }
+    h2 {
+      font-size: 13px;
+      margin: 6px 0 3px 0;
+      text-transform: uppercase;
+    }
+    .privacy-banner {
+      border: 1.5px solid #000;
+      padding: 3px 6px;
+      font-weight: bold;
+      text-align: center;
+      background: #f4f4f4;
+      margin-bottom: 5px;
+      font-size: 11.5px;
+    }
+    .meta-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 5px;
+      flex-wrap: wrap;
+    }
+    .meta-box {
+      border: 1px solid #000;
+      padding: 3px 6px;
+      flex: 1 1 140px;
+      font-weight: bold;
+    }
+    .routine-box {
+      border: 1px solid #000;
+      padding: 5px 8px;
+      margin-bottom: 6px;
+      background: #fafafa;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .routine-box ol {
+      margin: 3px 0;
+      padding-left: 18px;
+    }
+    .routine-box li { margin-bottom: 2.5px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 5px;
+    }
+    th, td {
+      border: 1px solid #000;
+      padding: 3px 4px;
+      vertical-align: middle;
+      font-size: 10.5px;
+    }
+    th {
+      background: #eee;
+      text-align: center;
+    }
+    td.tall { height: 9.5mm; }
+    td.center { text-align: center; white-space: nowrap; }
+    .cb {
+      display: inline-block;
+      width: 5.2mm;
+      height: 5.2mm;
+      border: 1.5px solid #000;
+      vertical-align: middle;
+      margin-right: 1px;
+      background: #fff;
+    }
+    .ev { font-size: 9.5px; font-weight: normal; color: #222; }
+    footer {
+      margin-top: 6px;
+      padding-top: 3px;
+      border-top: 1px solid #000;
+      font-size: 10px;
+      text-align: center;
+    }
+    footer a { color: #000; }
+    @media print {
+      body { padding: 0; font-size: 11px; }
+      .nav-bar { display: none; }
+      .page { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="nav-bar">
+      <a href="index.html">← Field Kit Index</a>
+      <a href="../ipc-kit.html">Open App (ipc-kit.html)</a>
+      <a href="../evidence/evidence-register.html">Evidence Register</a>
+    </div>
+
+    <div class="top-header">
+      <h1>30-Minute Monthly Review Routine &amp; Corrective Action Log</h1>
+      <span>Monitoring, audit &amp; feedback <span class="ev">[HH-12, RC-06, IPC-01]</span></span>
+    </div>
+
+    <div class="privacy-banner">
+      Do not write names, ID numbers or clinical details on this sheet. <span class="ev">[HH-10, PR-02, PR-03]</span>
+    </div>
+
+    <div class="meta-row">
+      <div class="meta-box">Review Month (YYYY-MM): __________________</div>
+      <div class="meta-box">Areas covered: ___________________________</div>
+      <div class="meta-box">Chaired by role: <em>IPC focal person</em> <span class="ev">[IPC-02]</span></div>
+    </div>
+
+    <div class="routine-box">
+      <h2>30-Minute Monthly Review Routine (for the IPC Focal Person) <span class="ev">[HH-12, RC-06, IPC-01]</span></h2>
+      <ol>
+        <li><span class="cb"></span> <strong>Prepare report before the meeting:</strong> In <code>Reports</code>, select the month and area codes, print the summary or download the CSV reports, and bring completed <code>readiness-checklist.html</code> sheets and stock alerts <span class="ev">[IPC-01]</span>.</li>
+        <li><span class="cb"></span> <strong>Check last month's actions (5 min):</strong> Fill in <em>Checked on</em>, <em>Done? (Yes/Partly/No)</em>, and <em>Result seen next review</em> on last month's log rows <span class="ev">[RC-06]</span>.</li>
+        <li><span class="cb"></span> <strong>Share results with counts, not just percentages (10 min):</strong> Always present both numbers, e.g. <em>160 of 200 opportunities, 80%</em> <span class="ev">[HH-03, HH-06]</span>. Combine sessions by adding counts first, never by averaging percentages <span class="ev">[HH-05]</span>.</li>
+        <li><span class="cb"></span> <strong>Flag small samples:</strong> Any group with fewer than 200 opportunities (or your facility's threshold) is flagged <em>Small sample – interpret with care</em> <span class="ev">[HH-07]</span>. Review small groups before sharing reports outside the team.</li>
+        <li><span class="cb"></span> <strong>Discuss without blaming individuals (5 min):</strong> Observation is for improving supplies, placement, and workflow—never for naming or punishing staff <span class="ev">[HH-10, HH-12, IPC-03]</span>.</li>
+        <li><span class="cb"></span> <strong>Pick at most 3 actions &amp; assign to a ROLE with due date (10 min):</strong> Choose up to 3 realistic fixes. Assign each to a <strong>ROLE</strong> (<code>IPC focal person</code>, <code>Ward in-charge</code>, <code>Storekeeper</code>, <code>Facility manager</code>, <code>Maintenance lead</code>, or <code>Cleaning supervisor</code>—never a name) with a clear due date. Next month, check completion and record the result <span class="ev">[RC-06]</span>.</li>
+      </ol>
+    </div>
+
+    <h2>Corrective Action Log <span class="ev">[RC-06, IPC-01]</span></h2>
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 4%;">#</th>
+          <th style="width: 20%;">Finding<br><span class="ev">(short, no names, include area code)</span></th>
+          <th style="width: 22%;">Action to take<br><span class="ev">(pick max 3 new actions per month)</span></th>
+          <th style="width: 13%;">Responsible role<br><span class="ev">(ROLE only, no name)</span></th>
+          <th style="width: 9%;">Due date<br><span class="ev">(YYYY-MM-DD)</span></th>
+          <th style="width: 9%;">Checked on<br><span class="ev">(YYYY-MM-DD)</span></th>
+          <th style="width: 11%;">Done?<br><span class="ev">(tick one)</span></th>
+          <th style="width: 12%;">Result seen next review</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background: #f9f9f9; font-style: italic;">
+          <td class="center">Ex</td>
+          <td>OPD: Hand rub empty at triage desk; 12 of 25 opp. (48%, small sample)</td>
+          <td>Mount wall bracket at triage and add daily morning refill check</td>
+          <td>Ward in-charge</td>
+          <td class="center">2026-11-15</td>
+          <td class="center">2026-12-01</td>
+          <td class="center">☑Y ☐P ☐N</td>
+          <td>Dispenser full all month; 38 of 45 (84%)</td>
+        </tr>
+        <tr>
+          <td class="tall center">1</td><td></td><td></td><td></td><td></td><td></td>
+          <td class="center"><span class="cb"></span>Y <span class="cb"></span>P <span class="cb"></span>N</td><td></td>
+        </tr>
+        <tr>
+          <td class="tall center">2</td><td></td><td></td><td></td><td></td><td></td>
+          <td class="center"><span class="cb"></span>Y <span class="cb"></span>P <span class="cb"></span>N</td><td></td>
+        </tr>
+        <tr>
+          <td class="tall center">3</td><td></td><td></td><td></td><td></td><td></td>
+          <td class="center"><span class="cb"></span>Y <span class="cb"></span>P <span class="cb"></span>N</td><td></td>
+        </tr>
+        <tr>
+          <td class="tall center">4</td><td></td><td></td><td></td><td></td><td></td>
+          <td class="center"><span class="cb"></span>Y <span class="cb"></span>P <span class="cb"></span>N</td><td></td>
+        </tr>
+        <tr>
+          <td class="tall center">5</td><td></td><td></td><td></td><td></td><td></td>
+          <td class="center"><span class="cb"></span>Y <span class="cb"></span>P <span class="cb"></span>N</td><td></td>
+        </tr>
+        <tr>
+          <td class="tall center">6</td><td></td><td></td><td></td><td></td><td></td>
+          <td class="center"><span class="cb"></span>Y <span class="cb"></span>P <span class="cb"></span>N</td><td></td>
+        </tr>
+        <tr>
+          <td class="tall center">7</td><td></td><td></td><td></td><td></td><td></td>
+          <td class="center"><span class="cb"></span>Y <span class="cb"></span>P <span class="cb"></span>N</td><td></td>
+        </tr>
+        <tr>
+          <td class="tall center">8</td><td></td><td></td><td></td><td></td><td></td>
+          <td class="center"><span class="cb"></span>Y <span class="cb"></span>P <span class="cb"></span>N</td><td></td>
+        </tr>
+        <tr>
+          <td class="tall center">9</td><td></td><td></td><td></td><td></td><td></td>
+          <td class="center"><span class="cb"></span>Y <span class="cb"></span>P <span class="cb"></span>N</td><td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <footer>
+      IPC Starter Kit v1.0.0 · Original text © 2026 @mostafase · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> · Sources: see evidence register (<a href="../evidence/evidence-register.html">evidence/evidence-register.html</a>)
+    </footer>
+  </div>
+</body>
+</html>

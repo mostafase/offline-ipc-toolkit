@@ -1,0 +1,327 @@
+{
+  "format": "ipc-starter-kit-backup",
+  "formatVersion": 1,
+  "appVersion": "1.0.0",
+  "createdAt": "2026-11-07T09:05:00.000Z",
+  "mode": "practice",
+  "checksum": "e2c4edc0",
+  "data": {
+    "schema": 1,
+    "settings": {
+      "facilityLabel": "Clinique Été – démo",
+      "areaCodes": [
+        "OPD",
+        "MAT",
+        "WARD-A"
+      ],
+      "smallSampleThreshold": 200,
+      "expiryWindowDays": 90,
+      "language": "fr"
+    },
+    "hh": {
+      "entries": [
+        {
+          "id": "h1",
+          "period": "2026-10",
+          "area": "OPD",
+          "source": "paper",
+          "rub": 52,
+          "wash": 18,
+          "missed": 30,
+          "ind": [
+            40,
+            12,
+            15,
+            38,
+            20
+          ],
+          "act": [
+            26,
+            9,
+            12,
+            25,
+            10
+          ]
+        },
+        {
+          "id": "h2",
+          "period": "2026-10",
+          "area": "MAT",
+          "source": "paper",
+          "rub": 61,
+          "wash": 34,
+          "missed": 25,
+          "ind": [
+            45,
+            30,
+            28,
+            40,
+            12
+          ],
+          "act": [
+            35,
+            24,
+            24,
+            30,
+            6
+          ]
+        },
+        {
+          "id": "h3",
+          "period": "2026-10",
+          "area": "WARD-A",
+          "source": "paper",
+          "rub": 6,
+          "wash": 2,
+          "missed": 4,
+          "ind": null,
+          "act": null
+        },
+        {
+          "id": "h4",
+          "period": "2026-11",
+          "area": "OPD",
+          "source": "tally",
+          "rub": 7,
+          "wash": 2,
+          "missed": 3,
+          "ind": [
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "act": [
+            5,
+            1,
+            2,
+            3,
+            1
+          ]
+        }
+      ],
+      "draft": null
+    },
+    "stock": {
+      "items": [
+        {
+          "id": "i5",
+          "name": "Alcohol-based hand rub",
+          "unit": "bottle (500 mL)",
+          "reorderPoint": 10,
+          "tracksExpiry": true,
+          "alertDays": null,
+          "active": true
+        },
+        {
+          "id": "i6",
+          "name": "Savon liquide (flacon) — démo",
+          "unit": "bottle (1 L)",
+          "reorderPoint": 6,
+          "tracksExpiry": false,
+          "alertDays": null,
+          "active": true
+        },
+        {
+          "id": "i7",
+          "name": "Examination gloves (medium)",
+          "unit": "box (100 gloves)",
+          "reorderPoint": 8,
+          "tracksExpiry": true,
+          "alertDays": null,
+          "active": true
+        },
+        {
+          "id": "i8",
+          "name": "Chlorine granules",
+          "unit": "tub (1 kg)",
+          "reorderPoint": 2,
+          "tracksExpiry": true,
+          "alertDays": null,
+          "active": true
+        },
+        {
+          "id": "i9",
+          "name": "Waste bags, yellow",
+          "unit": "pack (50 bags)",
+          "reorderPoint": 4,
+          "tracksExpiry": false,
+          "alertDays": null,
+          "active": true
+        }
+      ],
+      "txns": [
+        {
+          "id": "t10",
+          "itemId": "i5",
+          "date": "2026-09-08",
+          "type": "receipt",
+          "qty": 12,
+          "batch": "HR-2291",
+          "expiry": "2026-11-02",
+          "reason": "",
+          "area": ""
+        },
+        {
+          "id": "t11",
+          "itemId": "i5",
+          "date": "2026-09-28",
+          "type": "issue",
+          "qty": 8,
+          "batch": "HR-2291",
+          "expiry": "2026-11-02",
+          "reason": "",
+          "area": "OPD"
+        },
+        {
+          "id": "t12",
+          "itemId": "i5",
+          "date": "2026-10-08",
+          "type": "receipt",
+          "qty": 10,
+          "batch": "HR-3104",
+          "expiry": "2026-12-02",
+          "reason": "",
+          "area": ""
+        },
+        {
+          "id": "t13",
+          "itemId": "i5",
+          "date": "2026-10-18",
+          "type": "receipt",
+          "qty": 14,
+          "batch": "HR-3388",
+          "expiry": "2027-09-03",
+          "reason": "",
+          "area": ""
+        },
+        {
+          "id": "t14",
+          "itemId": "i5",
+          "date": "2026-10-28",
+          "type": "issue",
+          "qty": 4,
+          "batch": "HR-3104",
+          "expiry": "2026-12-02",
+          "reason": "",
+          "area": "MAT"
+        },
+        {
+          "id": "t15",
+          "itemId": "i6",
+          "date": "2026-09-23",
+          "type": "receipt",
+          "qty": 20,
+          "batch": "",
+          "expiry": "",
+          "reason": "",
+          "area": ""
+        },
+        {
+          "id": "t16",
+          "itemId": "i6",
+          "date": "2026-10-23",
+          "type": "issue",
+          "qty": 9,
+          "batch": "",
+          "expiry": "",
+          "reason": "",
+          "area": "WARD-A"
+        },
+        {
+          "id": "t17",
+          "itemId": "i6",
+          "date": "2026-11-04",
+          "type": "count",
+          "qty": 10,
+          "batch": "",
+          "expiry": "",
+          "reason": "",
+          "area": ""
+        },
+        {
+          "id": "t18",
+          "itemId": "i7",
+          "date": "2026-09-18",
+          "type": "receipt",
+          "qty": 12,
+          "batch": "GL-77A",
+          "expiry": "2028-03-21",
+          "reason": "",
+          "area": ""
+        },
+        {
+          "id": "t19",
+          "itemId": "i7",
+          "date": "2026-10-26",
+          "type": "issue",
+          "qty": 5,
+          "batch": "GL-77A",
+          "expiry": "2028-03-21",
+          "reason": "",
+          "area": "MAT"
+        },
+        {
+          "id": "t20",
+          "itemId": "i7",
+          "date": "2026-11-01",
+          "type": "adjust",
+          "qty": -1,
+          "batch": "GL-77A",
+          "expiry": "2028-03-21",
+          "reason": "damaged",
+          "area": ""
+        },
+        {
+          "id": "t21",
+          "itemId": "i8",
+          "date": "2026-08-29",
+          "type": "receipt",
+          "qty": 3,
+          "batch": "CL-0412",
+          "expiry": "2027-05-26",
+          "reason": "",
+          "area": ""
+        },
+        {
+          "id": "t22",
+          "itemId": "i8",
+          "date": "2026-10-17",
+          "type": "issue",
+          "qty": 3,
+          "batch": "CL-0412",
+          "expiry": "2027-05-26",
+          "reason": "",
+          "area": "WARD-A"
+        },
+        {
+          "id": "t23",
+          "itemId": "i9",
+          "date": "2026-10-13",
+          "type": "receipt",
+          "qty": 10,
+          "batch": "",
+          "expiry": "",
+          "reason": "",
+          "area": ""
+        },
+        {
+          "id": "t24",
+          "itemId": "i9",
+          "date": "2026-10-30",
+          "type": "issue",
+          "qty": 3,
+          "batch": "",
+          "expiry": "",
+          "reason": "",
+          "area": "MAT"
+        }
+      ]
+    },
+    "meta": {
+      "lastBackupAt": null,
+      "nextId": 25
+    }
+  }
+}

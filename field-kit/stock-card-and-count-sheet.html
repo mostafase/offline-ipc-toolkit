@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:">
+  <title>Stock Card and Physical Count Sheet – IPC Starter Kit v1.0.0</title>
+  <style>
+    @page { size: auto; margin: 12mm; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #000;
+      background: #fff;
+      margin: 0;
+      padding: 8px;
+      font-size: 11.5px;
+      line-height: 1.3;
+    }
+    .page {
+      max-width: 190mm;
+      margin: 0 auto;
+    }
+    .page-break {
+      page-break-before: always;
+      break-before: page;
+    }
+    .nav-bar {
+      margin-bottom: 6px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #444;
+      font-size: 11px;
+    }
+    .nav-bar a { color: #000; text-decoration: underline; margin-right: 12px; }
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 2px solid #000;
+      padding-bottom: 2px;
+      margin-bottom: 4px;
+    }
+    h1 { font-size: 16px; margin: 0; }
+    .privacy-banner {
+      border: 1.5px solid #000;
+      padding: 3px 6px;
+      font-weight: bold;
+      text-align: center;
+      background: #f4f4f4;
+      margin-bottom: 5px;
+      font-size: 11.5px;
+    }
+    .meta-grid {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 5px;
+      flex-wrap: wrap;
+    }
+    .meta-box {
+      border: 1px solid #000;
+      padding: 4px 6px;
+      flex: 1 1 130px;
+      font-weight: bold;
+    }
+    .meta-box span {
+      font-weight: normal;
+      font-size: 10px;
+      display: block;
+    }
+    .rules-box {
+      border: 1px solid #000;
+      padding: 4px 6px;
+      margin-bottom: 5px;
+      font-size: 10.5px;
+      background: #fafafa;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 5px;
+    }
+    th, td {
+      border: 1px solid #000;
+      padding: 3.5px 4px;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 10.5px;
+    }
+    th {
+      background: #eee;
+      font-weight: bold;
+    }
+    td.tall { height: 7.2mm; }
+    .cb {
+      display: inline-block;
+      width: 5.2mm;
+      height: 5.2mm;
+      border: 1.5px solid #000;
+      vertical-align: middle;
+      margin-right: 2px;
+      background: #fff;
+    }
+    .ev { font-size: 9.5px; font-weight: normal; color: #222; }
+    footer {
+      margin-top: 6px;
+      padding-top: 3px;
+      border-top: 1px solid #000;
+      font-size: 10px;
+      text-align: center;
+    }
+    footer a { color: #000; }
+    @media print {
+      body { padding: 0; font-size: 11px; }
+      .nav-bar { display: none; }
+      .page { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <!-- PAGE 1: STOCK CARD -->
+  <div class="page">
+    <div class="nav-bar">
+      <a href="index.html">← Field Kit Index</a>
+      <a href="../ipc-kit.html">Open App (ipc-kit.html)</a>
+      <a href="../evidence/evidence-register.html">Evidence Register</a>
+    </div>
+
+    <div class="top-header">
+      <h1>Page 1: IPC Supply Stock Card <span class="ev">[ST-06]</span></h1>
+      <span>Keep ONE card per item · Use earliest-expiring usable batch first <span class="ev">[ST-07]</span></span>
+    </div>
+
+    <div class="privacy-banner">
+      Do not write names, ID numbers or clinical details on this sheet. <span class="ev">[PR-02, PR-03]</span>
+    </div>
+
+    <div class="meta-grid">
+      <div class="meta-box" style="flex: 1.6 1 180px;">Item: ____________________________<span>Example: Alcohol hand rub 500 mL</span></div>
+      <div class="meta-box">Unit: __________________<span>ONE unit only (locked after first entry) <span class="ev">[ST-01]</span></span></div>
+      <div class="meta-box">Reorder point: _________<span>Order when balance is at/below <span class="ev">[ST-09]</span></span></div>
+      <div class="meta-box">Alert window (days): _____<span>Default: 90 days <span class="ev">[ST-08]</span></span></div>
+      <div class="meta-box" style="flex: 0.9 1 120px;">Tracks expiry:<br><span class="cb"></span> Yes &nbsp; <span class="cb"></span> No</div>
+    </div>
+
+    <div class="rules-box">
+      <strong>Stock card rules:</strong>
+      <strong>Balance</strong> counts <em>usable stock only</em> (stockout = 0 usable stock) <span class="ev">[ST-02, ST-03]</span>. Expired stock never counts as usable and must be removed; an expiry date is usable up to and including that day <span class="ev">[ST-10]</span>. Issue the earliest-expiring usable batch first (<em>Use first</em>) <span class="ev">[ST-07]</span>.<br>
+      <strong>Type codes:</strong> <code>R</code> = Receipt · <code>I</code> = Issue · <code>C</code> = Physical count <span class="ev">[ST-04]</span> · <code>A</code> = Adjustment <span class="ev">[ST-05]</span>.<br>
+      <strong>Adjustment reason codes <span class="ev">[ST-05]</span>:</strong> <em>Expired – removed</em> · <em>Damaged</em> · <em>Lost</em> · <em>Transferred out</em> · <em>Found</em> · <em>Transferred in</em> · <em>Correction</em>.
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 10%;">Date<br><span class="ev">(YYYY-MM-DD)</span></th>
+          <th style="width: 6%;">Type<br><span class="ev">R/I/C/A</span></th>
+          <th style="width: 11%;">Batch</th>
+          <th style="width: 11%;">Expiry<br><span class="ev">(YYYY-MM-DD)</span></th>
+          <th style="width: 7%;">In<br><span class="ev">(+)</span></th>
+          <th style="width: 7%;">Out<br><span class="ev">(-)</span></th>
+          <th style="width: 8%;">Counted<br><span class="ev">(C)</span></th>
+          <th style="width: 9%;">Adjustment<br><span class="ev">(+/-)</span></th>
+          <th style="width: 13%;">Reason code<br><span class="ev">(for A)</span></th>
+          <th style="width: 9%;">Balance<br><span class="ev">(usable)</span></th>
+          <th style="width: 9%;">Area code<br><span class="ev">(issues)</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      </tbody>
+    </table>
+
+    <footer>
+      IPC Starter Kit v1.0.0 · Original text © 2026 @mostafase · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> · Sources: see evidence register (<a href="../evidence/evidence-register.html">evidence/evidence-register.html</a>)
+    </footer>
+  </div>
+
+  <!-- PAGE 2: PHYSICAL COUNT SHEET -->
+  <div class="page page-break">
+    <div class="top-header">
+      <h1>Page 2: Physical Count Sheet <span class="ev">[ST-04]</span></h1>
+      <span>Compare physical count against stock cards / app records</span>
+    </div>
+
+    <div class="privacy-banner">
+      Do not write names, ID numbers or clinical details on this sheet. <span class="ev">[PR-02, PR-03]</span>
+    </div>
+
+    <div class="meta-grid">
+      <div class="meta-box">Date of count (YYYY-MM-DD): __________________</div>
+      <div class="meta-box">Store / Area code: ___________________</div>
+      <div class="meta-box">Role performing count: _______________________<span>Role only (e.g. Storekeeper, IPC focal person) – no name</span></div>
+    </div>
+
+    <div class="rules-box">
+      <strong>Physical count rules <span class="ev">[ST-02, ST-04, ST-05, ST-10]</span>:</strong>
+      <ol style="margin: 2px 0; padding-left: 18px;">
+        <li><strong>Count only what you can see:</strong> Open boxes if needed and count using the item's locked unit <span class="ev">[ST-01]</span>.</li>
+        <li><strong>Separate expired or damaged stock:</strong> Any batch past its expiry date (or damaged) is NOT usable stock. Move it out of the usable storage area immediately and record an adjustment (<em>Expired – removed</em> or <em>Damaged</em>) <span class="ev">[ST-02, ST-05, ST-10]</span>.</li>
+        <li><strong>Enter counts the same day:</strong> Update the stock card or enter the count in <code>Stock &gt; Record &gt; Physical count</code> on the same day so balances match actual usable stock on the shelf <span class="ev">[ST-04]</span>.</li>
+      </ol>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 24%;">Item</th>
+          <th style="width: 11%;">Unit<br><span class="ev">[ST-01]</span></th>
+          <th style="width: 12%;">Batch</th>
+          <th style="width: 13%;">Expiry<br><span class="ev">(YYYY-MM-DD)</span></th>
+          <th style="width: 12%;">Counted quantity</th>
+          <th style="width: 14%;">Expired?<br><span class="ev">[ST-10]</span></th>
+          <th style="width: 14%;">Damaged?<br><span class="ev">[ST-05]</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td><span class="cb"></span>Y <span class="cb"></span>N</td><td><span class="cb"></span>Y <span class="cb"></span>N</td></tr>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td><span class="cb"></span>Y <span class="cb"></span>N</td><td><span class="cb"></span>Y <span class="cb"></span>N</td></tr>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td><span class="cb"></span>Y <span class="cb"></span>N</td><td><span class="cb"></span>Y <span class="cb"></span>N</td></tr>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td><span class="cb"></span>Y <span class="cb"></span>N</td><td><span class="cb"></span>Y <span class="cb"></span>N</td></tr>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td><span class="cb"></span>Y <span class="cb"></span>N</td><td><span class="cb"></span>Y <span class="cb"></span>N</td></tr>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td><span class="cb"></span>Y <span class="cb"></span>N</td><td><span class="cb"></span>Y <span class="cb"></span>N</td></tr>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td><span class="cb"></span>Y <span class="cb"></span>N</td><td><span class="cb"></span>Y <span class="cb"></span>N</td></tr>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td><span class="cb"></span>Y <span class="cb"></span>N</td><td><span class="cb"></span>Y <span class="cb"></span>N</td></tr>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td><span class="cb"></span>Y <span class="cb"></span>N</td><td><span class="cb"></span>Y <span class="cb"></span>N</td></tr>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td><span class="cb"></span>Y <span class="cb"></span>N</td><td><span class="cb"></span>Y <span class="cb"></span>N</td></tr>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td><span class="cb"></span>Y <span class="cb"></span>N</td><td><span class="cb"></span>Y <span class="cb"></span>N</td></tr>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td><span class="cb"></span>Y <span class="cb"></span>N</td><td><span class="cb"></span>Y <span class="cb"></span>N</td></tr>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td><span class="cb"></span>Y <span class="cb"></span>N</td><td><span class="cb"></span>Y <span class="cb"></span>N</td></tr>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td><span class="cb"></span>Y <span class="cb"></span>N</td><td><span class="cb"></span>Y <span class="cb"></span>N</td></tr>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td><span class="cb"></span>Y <span class="cb"></span>N</td><td><span class="cb"></span>Y <span class="cb"></span>N</td></tr>
+        <tr><td class="tall"></td><td></td><td></td><td></td><td></td><td><span class="cb"></span>Y <span class="cb"></span>N</td><td><span class="cb"></span>Y <span class="cb"></span>N</td></tr>
+      </tbody>
+    </table>
+
+    <div style="font-weight: bold; font-size: 11px; margin-top: 4px;">
+      Entered in app / stock cards on same day: <span class="cb"></span> <span style="font-weight: normal; font-size: 10px;">(initials NOT needed)</span>
+    </div>
+
+    <footer>
+      IPC Starter Kit v1.0.0 · Original text © 2026 @mostafase · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> · Sources: see evidence register (<a href="../evidence/evidence-register.html">evidence/evidence-register.html</a>)
+    </footer>
+  </div>
+</body>
+</html>

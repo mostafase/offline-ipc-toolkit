@@ -1,0 +1,4 @@
+period,area,sessions,opportunities,hand_rub,handwash,missed,actions,adherence_percent,small_sample,moment_data_opportunities,m1_indications,m1_actions,m2_indications,m2_actions,m3_indications,m3_actions,m4_indications,m4_actions,m5_indications,m5_actions
+2026-11,OPD,1,30,6,4,20,10,33.3,yes,0,,,,,,,,,,
+2026-10,OPD,1,10,9,0,1,9,90.0,yes,0,,,,,,,,,,
+ALL,ALL,2,40,15,4,21,19,47.5,yes,0,,,,,,,,,,

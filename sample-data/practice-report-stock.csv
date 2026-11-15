@@ -1,0 +1,6 @@
+report_date,item,unit,usable_on_hand,status,reorder_point,expired_on_hand_not_usable,expiring_within_window,alert_window_days,use_first_batch,use_first_expiry,use_first_qty,last_physical_count
+2026-11-07,Alcohol-based hand rub,bottle (500 mL),20,expiring,10,4,6,90,HR-3104,2026-12-02,6,
+2026-11-07,Liquid soap,bottle (1 L),10,ok,6,0,0,90,,,10,2026-11-04
+2026-11-07,Examination gloves (medium),box (100 gloves),6,low,8,0,0,90,GL-77A,2028-03-21,6,
+2026-11-07,Chlorine granules,tub (1 kg),0,stockout,2,0,0,90,,,,
+2026-11-07,"Waste bags, yellow",pack (50 bags),7,ok,4,0,0,90,,,7,

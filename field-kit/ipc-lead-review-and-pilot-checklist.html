@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:">
+  <title>IPC Lead Review and Pilot Checklist – IPC Starter Kit v1.0.0</title>
+  <style>
+    @page { size: auto; margin: 12mm; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #000;
+      background: #fff;
+      margin: 0;
+      padding: 8px;
+      font-size: 11.5px;
+      line-height: 1.3;
+    }
+    .page {
+      max-width: 190mm;
+      margin: 0 auto;
+    }
+    .nav-bar {
+      margin-bottom: 6px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #444;
+      font-size: 11px;
+    }
+    .nav-bar a { color: #000; text-decoration: underline; margin-right: 12px; }
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 2px solid #000;
+      padding-bottom: 2px;
+      margin-bottom: 4px;
+    }
+    h1 { font-size: 16px; margin: 0; }
+    h2 {
+      font-size: 13px;
+      margin: 7px 0 3px 0;
+      background: #eee;
+      padding: 3px 6px;
+      border: 1px solid #000;
+    }
+    .privacy-banner {
+      border: 1.5px solid #000;
+      padding: 3px 6px;
+      font-weight: bold;
+      text-align: center;
+      background: #f4f4f4;
+      margin-bottom: 5px;
+      font-size: 11.5px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 5px;
+    }
+    th, td {
+      border: 1px solid #000;
+      padding: 3.5px 5px;
+      vertical-align: middle;
+      font-size: 10.8px;
+    }
+    th {
+      background: #f2f2f2;
+      text-align: center;
+    }
+    td.center { text-align: center; white-space: nowrap; }
+    .cb {
+      display: inline-block;
+      width: 5.2mm;
+      height: 5.2mm;
+      border: 1.5px solid #000;
+      vertical-align: middle;
+      margin-right: 3px;
+      background: #fff;
+    }
+    .ev { font-size: 9.5px; font-weight: normal; color: #222; }
+    .box {
+      border: 1px solid #000;
+      padding: 5px 8px;
+      margin-bottom: 5px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    footer {
+      margin-top: 6px;
+      padding-top: 3px;
+      border-top: 1px solid #000;
+      font-size: 10px;
+      text-align: center;
+    }
+    footer a { color: #000; }
+    @media print {
+      body { padding: 0; font-size: 10.8px; }
+      .nav-bar { display: none; }
+      .page { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="nav-bar">
+      <a href="index.html">← Field Kit Index</a>
+      <a href="../ipc-kit.html">Open App (ipc-kit.html)</a>
+      <a href="../evidence/evidence-register.html">Evidence Register</a>
+    </div>
+
+    <div class="top-header">
+      <h1>Local IPC Lead Review &amp; 2–4 Week Pilot Checklist</h1>
+      <span>Complete Part A before real data entry, then run Part B <span class="ev">[IPC-01, IPC-02]</span></span>
+    </div>
+
+    <div class="privacy-banner">
+      Do not write names, ID numbers or clinical details on this sheet. <span class="ev">[HH-10, PR-02, PR-03]</span>
+    </div>
+
+    <h2>Part A: Local IPC Lead Review Before Use <span class="ev">[IPC-02]</span></h2>
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 8%;">Done</th>
+          <th style="width: 64%;">Required review step</th>
+          <th style="width: 28%;">Notes / Date (YYYY-MM-DD)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="center"><span class="cb"></span></td>
+          <td><strong>1. Local policy alignment:</strong> Hand hygiene moments, stock rules, and readiness checklist items match national/facility IPC guidelines <span class="ev">[HH-01, RC-01..RC-06, IPC-01]</span>.</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="center"><span class="cb"></span></td>
+          <td><strong>2. Area codes approved:</strong> Facility area codes defined (capital letters, numbers, or dash, max 12 chars, e.g. <code>OPD</code>, <code>MAT</code>, <code>WARD-A</code>) and entered in <code>Settings</code>.</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="center"><span class="cb"></span></td>
+          <td><strong>3. Stock items configured:</strong> Items, ONE consistent unit per item (locked after first entry) <span class="ev">[ST-01]</span>, local reorder points <span class="ev">[ST-09]</span>, and expiry alert window (default 90 days) <span class="ev">[ST-08]</span> set.</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="center"><span class="cb"></span></td>
+          <td><strong>4. Translation reviewed:</strong> If using Français or another translation, a fluent local clinical reviewer has checked all UI and field-kit terms (see <code>docs/TRANSLATING.md</code>).</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="center"><span class="cb"></span></td>
+          <td><strong>5. Evidence register verified against source documents (REQUIRED):</strong> Every published-guidance row in <code>evidence/evidence-register.html</code> is currently marked <em>Not yet verified against source text – check during local IPC lead review</em> because source PDFs were not fetched during build. Check claims against your copy of the WHO / USAID documents.</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="center"><span class="cb"></span></td>
+          <td><strong>6. Data-Handling Plan signed:</strong> <code>data-handling-plan.html</code> completed (approved devices, fixed folder, backup location, retention, small-group review) and signed by roles <span class="ev">[PR-01]</span>.</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="center"><span class="cb"></span></td>
+          <td><strong>7. Paper fallback printed:</strong> Copies of observation sheets, stock cards, count sheets, and readiness checklists printed and placed in pilot areas.</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Part B: 2–4 Week Pilot in 1–2 Areas</h2>
+    <div style="margin-bottom: 4px; font-size: 10.8px;">
+      <strong>Pilot area code(s):</strong> _______________________ &nbsp; <strong>Start date:</strong> _______________ &nbsp; <strong>End date:</strong> _______________
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 8%;">Pass</th>
+          <th style="width: 64%;">Pilot activity &amp; verification target</th>
+          <th style="width: 28%;">Result / Measured value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="center"><span class="cb"></span></td>
+          <td><strong>1. Device check on each pilot device:</strong> Run <code>Settings &gt; Check this device</code> (tests saving, downloads, file reading) and copy result into the device test log (<code>docs/DEVICE-TESTING.md</code>).</td>
+          <td>Device(s) passed: ____ / ____</td>
+        </tr>
+        <tr>
+          <td class="center"><span class="cb"></span></td>
+          <td><strong>2. Timed 5-minute practice run by each user <span class="ev">[HH-09]</span>:</strong> Each observer/storekeeper completes the 5-step practice run on <code>Home</code> (6 questions, 3 tally opportunities incl. one with two simultaneous moments, finish session, 1 stock issue, 1 backup). <strong>Target: ≤ 5 minutes.</strong></td>
+          <td>Users trained (count): ____<br>Longest time: ____ min</td>
+        </tr>
+        <tr>
+          <td class="center"><span class="cb"></span></td>
+          <td><strong>3. Paper vs. app double-entry for 1 week:</strong> Record hand hygiene sessions and stock movements on paper AND in the app for one full week; confirm session totals and usable balances match 100%.</td>
+          <td>Match? <span class="cb"></span> Yes &nbsp; <span class="cb"></span> No</td>
+        </tr>
+        <tr>
+          <td class="center"><span class="cb"></span></td>
+          <td><strong>4. Backup &amp; restore test after reopening:</strong> Download backup file, close browser, reopen, confirm data persists; run <code>Backup &gt; Restore from backup</code> (and confirm an invalid file is rejected without replacing data).</td>
+          <td>Restore OK? <span class="cb"></span> Yes &nbsp; <span class="cb"></span> No</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="box">
+      <strong>Pilot Team Feedback Questions (summarize without staff names):</strong>
+      <ol style="margin: 3px 0; padding-left: 18px;">
+        <li>Were any moment labels, stock reason codes, or readiness questions unclear? _________________________________________</li>
+        <li>Did observers correctly record simultaneous moments as ONE opportunity? ______________________________________________</li>
+        <li>Were any stock units or expiry dates confusing during physical count? ________________________________________________</li>
+      </ol>
+    </div>
+
+    <div class="box">
+      <strong>Go / No-Go Decision &amp; Criteria:</strong><br>
+      <em>Criteria for GO (App + Paper):</em> All Part A checks complete; practice run ≤ 5 min; 1-week paper vs. app double-entry matches; backup/restore test passes.<br>
+      <div style="margin-top: 4px;">
+        <span class="cb"></span> <strong>GO (App + Paper fallback)</strong> &nbsp;&nbsp;
+        <span class="cb"></span> <strong>GO – PAPER FORMS ONLY</strong> (if local devices do not pass storage/backup checks) &nbsp;&nbsp;
+        <span class="cb"></span> <strong>HOLD / REVISE</strong> (fix issues first)
+      </div>
+      <div style="margin-top: 5px;">
+        Signed by role (<em>IPC focal person</em>): _______________________ &nbsp; Approved by role (<em>Facility manager</em>): _______________________ &nbsp; Date: _____________
+      </div>
+    </div>
+
+    <footer>
+      IPC Starter Kit v1.0.0 · Original text © 2026 @mostafase · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> · Sources: see evidence register (<a href="../evidence/evidence-register.html">evidence/evidence-register.html</a>)
+    </footer>
+  </div>
+</body>
+</html>

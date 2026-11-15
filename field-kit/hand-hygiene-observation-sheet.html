@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:">
+  <title>Hand Hygiene Observation Sheet – IPC Starter Kit v1.0.0</title>
+  <style>
+    @page { size: auto; margin: 12mm; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #000;
+      background: #fff;
+      margin: 0;
+      padding: 6px;
+      font-size: 11.5px;
+      line-height: 1.25;
+    }
+    .page {
+      max-width: 190mm;
+      margin: 0 auto;
+    }
+    .nav-bar {
+      margin-bottom: 5px;
+      padding-bottom: 3px;
+      border-bottom: 1px solid #444;
+      font-size: 11px;
+    }
+    .nav-bar a { color: #000; text-decoration: underline; margin-right: 12px; }
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 2px solid #000;
+      padding-bottom: 2px;
+      margin-bottom: 4px;
+    }
+    h1 { font-size: 16px; margin: 0; }
+    .privacy-banner {
+      border: 1.5px solid #000;
+      padding: 3px 6px;
+      font-weight: bold;
+      text-align: center;
+      background: #f4f4f4;
+      margin-bottom: 4px;
+      font-size: 11.5px;
+    }
+    .meta-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 4px;
+      flex-wrap: wrap;
+    }
+    .meta-box {
+      border: 1px solid #000;
+      padding: 3px 6px;
+      flex: 1 1 120px;
+      font-weight: bold;
+    }
+    .meta-box span {
+      font-weight: normal;
+      font-size: 10.5px;
+      display: block;
+    }
+    .howto {
+      border: 1px solid #000;
+      padding: 3px 6px;
+      margin-bottom: 4px;
+      font-size: 10.5px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 4px;
+    }
+    th, td {
+      border: 1px solid #000;
+      padding: 1.5px 4px;
+      text-align: center;
+      vertical-align: middle;
+    }
+    th {
+      background: #eee;
+      font-size: 10.5px;
+    }
+    .cb {
+      display: inline-block;
+      width: 5.2mm;
+      height: 5.2mm;
+      border: 1.5px solid #000;
+      vertical-align: middle;
+      background: #fff;
+    }
+    .lbl {
+      font-size: 10px;
+      vertical-align: middle;
+      margin-left: 2px;
+    }
+    .bottom-grid {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .bottom-col {
+      flex: 1 1 180px;
+      border: 1px solid #000;
+      padding: 4px 6px;
+    }
+    .bottom-col h2 {
+      font-size: 11.5px;
+      margin: 0 0 3px 0;
+      border-bottom: 1px solid #000;
+      padding-bottom: 2px;
+    }
+    .totals-table th, .totals-table td {
+      padding: 2px 4px;
+      font-size: 10.5px;
+    }
+    .totals-table td.left { text-align: left; }
+    .legend-list {
+      margin: 2px 0;
+      padding-left: 15px;
+      font-size: 10.5px;
+    }
+    .legend-list li { margin-bottom: 1.5px; }
+    .ev { font-size: 9.5px; font-weight: normal; color: #222; }
+    footer {
+      margin-top: 4px;
+      padding-top: 3px;
+      border-top: 1px solid #000;
+      font-size: 10px;
+      text-align: center;
+    }
+    footer a { color: #000; }
+    @media print {
+      body { padding: 0; font-size: 10.8px; }
+      .nav-bar { display: none; }
+      .page { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="nav-bar">
+      <a href="index.html">← Field Kit Index</a>
+      <a href="../ipc-kit.html">Open App (ipc-kit.html)</a>
+      <a href="../evidence/evidence-register.html">Evidence Register</a>
+    </div>
+
+    <div class="top-header">
+      <h1>Hand Hygiene Observation Sheet (One Page)</h1>
+      <span>Target session: ~20 minutes <span class="ev">[HH-08]</span> · Trained observer <span class="ev">[HH-09]</span></span>
+    </div>
+
+    <div class="privacy-banner">
+      Do not write names, ID numbers or clinical details on this sheet. <span class="ev">[HH-10, PR-02, PR-03]</span>
+    </div>
+
+    <div class="meta-row">
+      <div class="meta-box">Month (YYYY-MM): __________________<span>Example: 2026-11</span></div>
+      <div class="meta-box">Area code: __________________<span>Facility code, e.g. OPD, MAT, WARD-A</span></div>
+      <div class="meta-box">Session number: ___________<span>1, 2, 3… within the month</span></div>
+      <div class="meta-box" style="flex: 0 1 110px;">Page ____ of ____<span>No observer name/ID</span></div>
+    </div>
+
+    <div class="howto">
+      <strong>How to use:</strong> Use <strong>one row per hand hygiene opportunity</strong>. Tick <strong>every moment (M1–M5)</strong> that applies at the same time; two moments happening together count as <strong>one opportunity (one row)</strong> <span class="ev">[HH-02]</span>. Then tick <strong>ONE outcome</strong> in that row: <em>Hand rub</em> (~20–30 s), <em>Handwash</em> with soap and water (~40–60 s), or <em>Missed</em> <span class="ev">[HH-04, HH-13]</span>. Wearing gloves does not replace hand hygiene <span class="ev">[HH-11]</span>.
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 7%;">#</th>
+          <th colspan="5" style="width: 50%;">Moments that apply (tick all that apply at the same time) <span class="ev">[HH-01, HH-02]</span></th>
+          <th colspan="3" style="width: 43%;">Outcome (tick ONE per row) <span class="ev">[HH-04]</span></th>
+        </tr>
+        <tr>
+          <th>Opp.</th>
+          <th>M1<br><span class="ev">Before pt</span></th>
+          <th>M2<br><span class="ev">Clean/aseptic</span></th>
+          <th>M3<br><span class="ev">Body fluid</span></th>
+          <th>M4<br><span class="ev">After pt</span></th>
+          <th>M5<br><span class="ev">Surroundings</span></th>
+          <th>Hand rub</th>
+          <th>Handwash</th>
+          <th>Missed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td></tr>
+        <tr><td>2</td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td></tr>
+        <tr><td>3</td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td></tr>
+        <tr><td>4</td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td></tr>
+        <tr><td>5</td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td></tr>
+        <tr><td>6</td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td></tr>
+        <tr><td>7</td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td></tr>
+        <tr><td>8</td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td></tr>
+        <tr><td>9</td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td></tr>
+        <tr><td>10</td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td></tr>
+        <tr><td>11</td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td></tr>
+        <tr><td>12</td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td></tr>
+        <tr><td>13</td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td></tr>
+        <tr><td>14</td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td></tr>
+        <tr><td>15</td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td></tr>
+        <tr><td>16</td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td></tr>
+        <tr><td>17</td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td></tr>
+        <tr><td>18</td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td></tr>
+        <tr><td>19</td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td></tr>
+        <tr><td>20</td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td><td><span class="cb"></span></td></tr>
+      </tbody>
+    </table>
+
+    <div class="bottom-grid">
+      <div class="bottom-col" style="flex: 1.1 1 200px;">
+        <h2>Session Totals (Hand hygiene &gt; Paper totals)</h2>
+        <table class="totals-table">
+          <tr><td class="left"><strong>Hand rub</strong></td><td style="width: 40%;"></td></tr>
+          <tr><td class="left"><strong>Handwash</strong></td><td></td></tr>
+          <tr><td class="left"><strong>Missed</strong></td><td></td></tr>
+          <tr><td class="left"><strong>Opportunities (= sum)</strong> <span class="ev">[HH-02]</span></td><td></td></tr>
+        </table>
+        <div style="font-size: 10px; margin-top: 3px;">
+          Adherence = 100 × (Hand rub + Handwash) / Opportunities <span class="ev">[HH-03]</span>. Combine sessions by adding counts first, never by averaging percentages <span class="ev">[HH-05]</span>. Always report as <em>X of Y opportunities, Z%</em> (&lt;200 opportunities = <em>Small sample – interpret with care</em>) <span class="ev">[HH-06, HH-07]</span>.
+        </div>
+        <div style="margin-top: 4px; font-weight: bold; font-size: 11px;">
+          Entered in app: <span class="cb"></span> <span style="font-weight: normal; font-size: 10px;">(initials NOT needed)</span>
+        </div>
+      </div>
+
+      <div class="bottom-col" style="flex: 1 1 175px;">
+        <h2>Optional Per-Moment Breakdown</h2>
+        <table class="totals-table">
+          <thead>
+            <tr><th>Moment</th><th>Indications<br><span class="ev">(boxes ticked)</span></th><th>Actions<br><span class="ev">(rub or wash)</span></th></tr>
+          </thead>
+          <tbody>
+            <tr><td>M1</td><td></td><td></td></tr>
+            <tr><td>M2</td><td></td><td></td></tr>
+            <tr><td>M3</td><td></td><td></td></tr>
+            <tr><td>M4</td><td></td><td></td></tr>
+            <tr><td>M5</td><td></td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="bottom-col" style="flex: 1.2 1 210px;">
+        <h2>Moment Legend <span class="ev">[HH-01]</span></h2>
+        <ol class="legend-list">
+          <li><strong>Before touching a patient</strong></li>
+          <li><strong>Before a clean/aseptic procedure</strong></li>
+          <li><strong>After body fluid exposure risk</strong></li>
+          <li><strong>After touching a patient</strong></li>
+          <li><strong>After touching patient surroundings</strong></li>
+        </ol>
+      </div>
+    </div>
+
+    <footer>
+      IPC Starter Kit v1.0.0 · Original text © 2026 @mostafase · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> · Sources: see evidence register (<a href="../evidence/evidence-register.html">evidence/evidence-register.html</a>)
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:">
+  <title>Hand Hygiene Practice Scenarios – IPC Starter Kit v1.0.0</title>
+  <style>
+    @page { size: auto; margin: 12mm; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #000;
+      background: #fff;
+      margin: 0;
+      padding: 8px;
+      font-size: 12px;
+      line-height: 1.35;
+    }
+    .page {
+      max-width: 190mm;
+      margin: 0 auto;
+    }
+    .page-break {
+      page-break-before: always;
+      break-before: page;
+    }
+    .nav-bar {
+      margin-bottom: 6px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #444;
+      font-size: 11px;
+    }
+    .nav-bar a { color: #000; text-decoration: underline; margin-right: 12px; }
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 2px solid #000;
+      padding-bottom: 2px;
+      margin-bottom: 5px;
+    }
+    h1 { font-size: 16.5px; margin: 0; }
+    h2 { font-size: 13.5px; margin: 8px 0 4px 0; }
+    .privacy-banner {
+      border: 1.5px solid #000;
+      padding: 3px 6px;
+      font-weight: bold;
+      text-align: center;
+      background: #f4f4f4;
+      margin-bottom: 6px;
+      font-size: 11.5px;
+    }
+    .legend-box {
+      border: 1px solid #000;
+      padding: 5px 8px;
+      margin-bottom: 6px;
+      background: #fafafa;
+    }
+    .legend-box ol {
+      margin: 3px 0;
+      padding-left: 18px;
+      columns: 2;
+    }
+    .scenario-card {
+      border: 1px solid #000;
+      padding: 6px 8px;
+      margin-bottom: 6px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .scenario-card p { margin: 2px 0 5px 0; }
+    .cb {
+      display: inline-block;
+      width: 5.2mm;
+      height: 5.2mm;
+      border: 1.5px solid #000;
+      vertical-align: middle;
+      margin-right: 3px;
+      background: #fff;
+    }
+    .tick-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      font-size: 11.5px;
+      margin-top: 3px;
+    }
+    .ev { font-size: 9.5px; font-weight: normal; color: #222; }
+    .ans-card {
+      border: 1px solid #000;
+      padding: 7px 9px;
+      margin-bottom: 7px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    footer {
+      margin-top: 8px;
+      padding-top: 4px;
+      border-top: 1px solid #000;
+      font-size: 10px;
+      text-align: center;
+    }
+    footer a { color: #000; }
+    @media print {
+      body { padding: 0; font-size: 11.5px; }
+      .nav-bar { display: none; }
+      .page { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <!-- PAGE 1: WORKSHEET -->
+  <div class="page">
+    <div class="nav-bar">
+      <a href="index.html">← Field Kit Index</a>
+      <a href="../ipc-kit.html">Open App (ipc-kit.html)</a>
+      <a href="../evidence/evidence-register.html">Evidence Register</a>
+    </div>
+
+    <div class="top-header">
+      <h1>Hand Hygiene Practice Scenarios – Group Training Worksheet</h1>
+      <span>Observer training before data collection <span class="ev">[HH-09]</span></span>
+    </div>
+
+    <div class="privacy-banner">
+      Do not write names, ID numbers or clinical details on this sheet. <span class="ev">[HH-10, PR-02, PR-03]</span>
+    </div>
+
+    <div class="legend-box">
+      <strong>Moment Legend (use these 5 moments for Scenarios 1–4) <span class="ev">[HH-01]</span>:</strong>
+      <ol>
+        <li><strong>Before touching a patient</strong></li>
+        <li><strong>Before a clean/aseptic procedure</strong></li>
+        <li><strong>After body fluid exposure risk</strong></li>
+        <li><strong>After touching a patient</strong></li>
+        <li><strong>After touching patient surroundings</strong></li>
+      </ol>
+      <div style="font-size: 11px; margin-top: 2px;">
+        <strong>Key rules:</strong> Tick all moments that happen together in the same opportunity (counted once) <span class="ev">[HH-02]</span>. Then choose ONE outcome: <em>Hand rub</em>, <em>Handwash</em>, or <em>Missed</em> <span class="ev">[HH-04]</span>.
+      </div>
+    </div>
+
+    <div class="scenario-card">
+      <strong>Scenario 1:</strong> A nurse finishes checking one patient's blood pressure and goes straight to help the next patient sit up. Between the two patients, the nurse uses alcohol-based hand rub.
+      <div class="tick-row">
+        <span><strong>Moments:</strong> <span class="cb"></span>M1 &nbsp; <span class="cb"></span>M2 &nbsp; <span class="cb"></span>M3 &nbsp; <span class="cb"></span>M4 &nbsp; <span class="cb"></span>M5</span>
+        <span><strong>Outcome:</strong> <span class="cb"></span>Hand rub &nbsp; <span class="cb"></span>Handwash &nbsp; <span class="cb"></span>Missed</span>
+        <span><strong>How many opportunities?</strong> <span class="cb"></span>1 &nbsp; <span class="cb"></span>2</span>
+      </div>
+    </div>
+
+    <div class="scenario-card">
+      <strong>Scenario 2:</strong> A health worker is about to dress a wound. They put on gloves without cleaning their hands first.
+      <div class="tick-row">
+        <span><strong>Moments:</strong> <span class="cb"></span>M1 &nbsp; <span class="cb"></span>M2 &nbsp; <span class="cb"></span>M3 &nbsp; <span class="cb"></span>M4 &nbsp; <span class="cb"></span>M5</span>
+        <span><strong>Outcome:</strong> <span class="cb"></span>Hand rub &nbsp; <span class="cb"></span>Handwash &nbsp; <span class="cb"></span>Missed</span>
+      </div>
+    </div>
+
+    <div class="scenario-card">
+      <strong>Scenario 3:</strong> After emptying a urine drainage bag, a health worker removes their gloves and washes hands with soap and water.
+      <div class="tick-row">
+        <span><strong>Moments:</strong> <span class="cb"></span>M1 &nbsp; <span class="cb"></span>M2 &nbsp; <span class="cb"></span>M3 &nbsp; <span class="cb"></span>M4 &nbsp; <span class="cb"></span>M5</span>
+        <span><strong>Outcome:</strong> <span class="cb"></span>Hand rub &nbsp; <span class="cb"></span>Handwash &nbsp; <span class="cb"></span>Missed</span>
+      </div>
+    </div>
+
+    <div class="scenario-card">
+      <strong>Scenario 4:</strong> A nurse straightens the bed sheets of a patient who is sitting in a chair across the room, then walks to the nurses' station without cleaning hands.
+      <div class="tick-row">
+        <span><strong>Moments:</strong> <span class="cb"></span>M1 &nbsp; <span class="cb"></span>M2 &nbsp; <span class="cb"></span>M3 &nbsp; <span class="cb"></span>M4 &nbsp; <span class="cb"></span>M5</span>
+        <span><strong>Outcome:</strong> <span class="cb"></span>Hand rub &nbsp; <span class="cb"></span>Handwash &nbsp; <span class="cb"></span>Missed</span>
+      </div>
+    </div>
+
+    <div class="scenario-card">
+      <strong>Scenario 5:</strong> Area A: 4 of 5 opportunities, 80%. Area B: 150 of 200 opportunities, 75%. Best conclusion?
+      <div style="margin-top: 3px;">
+        <div><span class="cb"></span> a) Area A has better hand hygiene than Area B.</div>
+        <div><span class="cb"></span> b) Area A has too few observations to compare; observe more before drawing conclusions.</div>
+        <div><span class="cb"></span> c) Both areas are the same.</div>
+      </div>
+    </div>
+
+    <div class="scenario-card">
+      <strong>Scenario 6:</strong> Session 1: 9 of 10 (90%). Session 2: 10 of 30 (33%). Combined result?
+      <div style="margin-top: 3px;">
+        <div><span class="cb"></span> a) 62% (average of the two percentages)</div>
+        <div><span class="cb"></span> b) 19 of 40 opportunities, 48%</div>
+        <div><span class="cb"></span> c) 90%</div>
+      </div>
+    </div>
+
+    <footer>
+      IPC Starter Kit v1.0.0 · Original text © 2026 @mostafase · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> · Sources: see evidence register (<a href="../evidence/evidence-register.html">evidence/evidence-register.html</a>)
+    </footer>
+  </div>
+
+  <!-- PAGE 2: ANSWER KEY -->
+  <div class="page page-break">
+    <div class="top-header">
+      <h1>Hand Hygiene Practice Scenarios – Trainer Answer Key</h1>
+      <span>Keep separate during group quiz · Discuss each rule <span class="ev">[HH-01..HH-11]</span></span>
+    </div>
+
+    <div class="privacy-banner">
+      Do not write names, ID numbers or clinical details on this sheet. <span class="ev">[HH-10, PR-02, PR-03]</span>
+    </div>
+
+    <div class="ans-card">
+      <strong>Scenario 1 Answer:</strong> <strong>Moments 4 and 1</strong> (4 After touching a patient + 1 Before touching a patient), Outcome: <strong>Hand rub</strong>, counted as <strong>ONE opportunity</strong> <span class="ev">[HH-01, HH-02, HH-04]</span>.<br>
+      <em>Why:</em> Moving directly from touching one patient to touching the next creates two indications at the same time. Two moments at the same time count once as a single hand hygiene opportunity (one row on the observation sheet).
+    </div>
+
+    <div class="ans-card">
+      <strong>Scenario 2 Answer:</strong> <strong>Moment 2</strong> (Before a clean/aseptic procedure), Outcome: <strong>Missed</strong> <span class="ev">[HH-01, HH-04, HH-11]</span>.<br>
+      <em>Why:</em> Dressing a wound is a clean/aseptic procedure. Putting on gloves does not replace hand hygiene; hands must be cleaned before putting on gloves.
+    </div>
+
+    <div class="ans-card">
+      <strong>Scenario 3 Answer:</strong> <strong>Moment 3</strong> (After body fluid exposure risk), Outcome: <strong>Handwash</strong> <span class="ev">[HH-01, HH-04, HH-11]</span>.<br>
+      <em>Why:</em> Emptying a urine drainage bag carries a body fluid exposure risk. Hands must be cleaned immediately after removing gloves; washing with soap and water is recorded as <em>Handwash</em>.
+    </div>
+
+    <div class="ans-card">
+      <strong>Scenario 4 Answer:</strong> <strong>Moment 5</strong> (After touching patient surroundings), Outcome: <strong>Missed</strong> <span class="ev">[HH-01, HH-04]</span>.<br>
+      <em>Why:</em> Touching the patient's bed sheets without touching the patient is Moment 5. Leaving the patient zone without cleaning hands is a missed opportunity.
+    </div>
+
+    <div class="ans-card">
+      <strong>Scenario 5 Answer:</strong> <strong>b) Area A has too few observations to compare; observe more before drawing conclusions.</strong> <span class="ev">[HH-06, HH-07]</span><br>
+      <em>Why:</em> Always read the counts alongside the percentage. Five opportunities is a very small sample (one missed action changes the result by 20 percentage points). Results with fewer than 200 opportunities are flagged <em>Small sample – interpret with care</em>.
+    </div>
+
+    <div class="ans-card">
+      <strong>Scenario 6 Answer:</strong> <strong>b) 19 of 40 opportunities, 48%</strong> <span class="ev">[HH-03, HH-05, HH-06]</span>.<br>
+      <em>Why:</em> Sessions are combined by adding the counts first (9 + 10 = 19 actions; 10 + 30 = 40 opportunities; 100 × 19 / 40 = 47.5%, rounded to 48%), never by averaging the session percentages.
+    </div>
+
+    <div class="legend-box">
+      <strong>Exact Moment Labels Used in App and Paper Forms <span class="ev">[HH-01]</span>:</strong>
+      <ol>
+        <li>1 Before touching a patient</li>
+        <li>2 Before a clean/aseptic procedure</li>
+        <li>3 After body fluid exposure risk</li>
+        <li>4 After touching a patient</li>
+        <li>5 After touching patient surroundings</li>
+      </ol>
+    </div>
+
+    <footer>
+      IPC Starter Kit v1.0.0 · Original text © 2026 @mostafase · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> · Sources: see evidence register (<a href="../evidence/evidence-register.html">evidence/evidence-register.html</a>)
+    </footer>
+  </div>
+</body>
+</html>
