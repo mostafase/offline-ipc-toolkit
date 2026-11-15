@@ -10,6 +10,8 @@ An offline infection prevention and control (IPC) starter kit for clinics and ho
 2. Extract the ZIP and open `START-HERE.html`.
 3. Open the app and choose **Try a 5-minute practice run** to use fictional data.
 
+![Hand hygiene practice report showing actions performed and opportunities observed](docs/media/hand-hygiene-practice.png)
+
 [Printable forms](field-kit/index.html) · [Device guide](docs/DEVICE-TESTING.md)
 
 **For IPC education and quality improvement.** Keep protected health information and personal identifiers out of the kit. See the [intended use, privacy guidance, and disclaimer](DISCLAIMER.md).
