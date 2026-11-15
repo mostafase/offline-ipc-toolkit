@@ -2,6 +2,16 @@
 
 An offline infection prevention and control (IPC) starter kit for clinics and hospitals. It includes hand hygiene observation, supply stock monitoring, and printable forms. The app runs from a local HTML file, with six interface languages including Arabic. See the [device matrix](docs/DEVICE-TESTING.md) before entering facility data.
 
+## Start here
+
+**[Download the offline kit](https://github.com/mostafase/offline-ipc-toolkit/releases/tag/v1.0.0)**
+
+1. On the release page, expand **Assets** and download `offline-ipc-toolkit-v1.0.0-noncommercial.zip`.
+2. Extract the ZIP and open `START-HERE.html`.
+3. Open the app and choose **Try a 5-minute practice run** to use fictional data.
+
+[Printable forms](field-kit/index.html) · [Device guide](docs/DEVICE-TESTING.md)
+
 **For IPC education and quality improvement.** Keep protected health information and personal identifiers out of the kit. See the [intended use, privacy guidance, and disclaimer](DISCLAIMER.md).
 
 **Project owner:** [@mostafase](https://github.com/mostafase). Free to download for noncommercial use, with source available. The code uses **PolyForm Noncommercial 1.0.0** and original documentation and training materials use **CC BY-NC-SA 4.0**. See the [license summary](LICENSE.md).
